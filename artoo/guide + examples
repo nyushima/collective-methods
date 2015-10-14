@@ -99,5 +99,10 @@ artoo.scrape('p', {
 	artoo.savePrettyJson(quotes);
 });
 
-//Get images
+//Get image thumbnails [reddit]
+var myJson = artoo.scrape('.thumbnail img', {
+  src: {attr: 'src'}
+}, artoo.savePrettyJson);
+
+
 
