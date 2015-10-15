@@ -99,10 +99,27 @@ artoo.scrape('p', {
 	artoo.savePrettyJson(quotes);
 });
 
-//Get image thumbnails [reddit]
+//Image scraper 
+//Step 1 - Get image thumbnails [reddit front page example]
 var myJson = artoo.scrape('.thumbnail img', {
   src: {attr: 'src'}
 }, artoo.savePrettyJson);
+//this will give you a data.json file with a list of .jpg links.
+
+//Step 2 - Loop through json file and download the images
+// Create a python (.py) file, copy and paste the code below, and run this python script in your terminal with this command = python NAMEOFYOURPYTHONFILE.py
+import urllib
+import json
+from pprint import pprint
+
+with open('./data.json') as data_file: 
+    data = json.load(data_file)
+
+x = 0;
+for obj in data:
+    print("downloading: " + obj['src'])
+    urllib.urlretrieve("http:" + obj['src'], str(x) + ".png")
+    x = x + 1
 
 
 
