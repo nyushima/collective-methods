@@ -30,7 +30,9 @@ artoo-latest.min.js:2 [artoo]: info - artoo is now good to go! "
 
 ##Examples
 
-###Example 1: simple scrape
+![alt meme]("http://oi60.tinypic.com/12375mt.jpg")
+
+###Example 1: Simple Scrape
 First test, go to http://hackernews.com, click on the artoo bookmark, and copy and paste this code into your javascript console:
 
 <pre>
@@ -44,7 +46,7 @@ Chrome will begin to download a data.json file that has all of the headlines and
 
 </br>
 
-###Example 2: a more complex scrape
+###Example 2: Scrape All The Things
 Now try a more complex scrape. Paste this inside your console:
 
 <pre>
@@ -81,17 +83,18 @@ artoo.scrape('tr tr:has(td.title:has(a)):not(:last)', {
 
 </br>
 
-###Example 3: Get the content, href, and class of all anchor tags on a page.
-
+###Example 3: Find Elements
+Get the content or properties of elements on a page 
 <pre>
-// Get the content, href, and class of all anchor tags on a page.
 artoo.scrape('a.links_wrapper__link', {
 	content: 'text', 
 	href: 'href', 
 	class: 'class'
 });
+</pre>
 
-// Get any quoted text from a page and save it to a json file.
+Get any quoted text from a page and save it to a JSON file.
+<pre>
 var quotes = [];
 artoo.scrape('p', {
 	text: function($) {
@@ -105,26 +108,27 @@ artoo.scrape('p', {
 	artoo.savePrettyJson(quotes);
 });
 </pre>
-
 </br>
+Get all links from a page.
+<pre>
+artoo.scrape('a', {
+	link: 'href'},
+artoo.savePrettyJson);
+</pre>
 
 ###Example 4: Image Scrape
 ######This example will scrape the images from a webpage.
-Copy this to your artoo console.
-
+#####[Using reddit.com 'front page' as an example]
 <pre>
-//Step 1 - Get image thumbnails [reddit front page example]
 var myJson = artoo.scrape('.thumbnail img', {
   src: {attr: 'src'}
 }, artoo.savePrettyJson);
-//this will give you a data.json file with a list of .jpg links.
 </pre>
-
+This will give you a data.json file with a list of .jpg links.
 </br>
-
-###### After generating the JSON file run this python script to download the images to your HDD.
-Create a python (.py) file named 'imagegrabber.py', copy and paste the code below. 
-
+<br>
+After generating the JSON file, run this python script to download the images to your hard-drive.</br><br>
+Create a python (.py) file named 'imagegrabber.py', copy and paste the code below. </br>
 <pre>
 import urllib
 import json
@@ -140,16 +144,35 @@ for obj in data:
     x = x + 1
 </pre>
 
-</br>
-
-Make sure the python file you created, and the JSON generated form artoo are in the same folder. Then, run this script by typing the following into your terminal. 
+###Example 5: Image Replace
+######This examples finds all the images on a webpages and replaces the images with cats
 <pre>
-python imagegrabber.py
+artoo.scrape('img', function($) {
+//$ references the JQuery object
+  var imgSrc = "http://www.lorempixel.com/400/200/cats";
+  console.log($(this).context.src);
+  $(this).context.src = imgSrc;
+  return $(this).src = imgSrc;
+//every time the object is found, return it with the image you want to replace
+});
 </pre>
-The images should be downloaded to that folder!
 
-</br>
-</br>
+
+####Example 6: Find and Replace Text 
+######This example finds a word or sentence and replaces it with whatever text you want. Try it out on a Wikipedia page
+<pre>
+artoo.scrape('p, h1, a', {
+	text: function($) {
+		var text = $(this).text().toLowerCase();
+		var find = "new york university";
+		var newText = text.replace(find, "Matt Belanger");
+		$(this).context.innerText = newText;
+		console.log($(this));
+		return $(this).context.innerText = newText;
+
+	}
+});
+  </pre>
 
 ##Documentation
 
