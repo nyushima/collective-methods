@@ -30,7 +30,7 @@ artoo-latest.min.js:2 [artoo]: info - artoo is now good to go! "
 
 ##Examples
 
-![alt meme]("http://oi60.tinypic.com/12375mt.jpg")
+![alt meme](http://oi60.tinypic.com/12375mt.jpg)
 
 ###Example 1: Simple Scrape
 First test, go to http://hackernews.com, click on the artoo bookmark, and copy and paste this code into your javascript console:
