@@ -123,7 +123,7 @@ artoo.scrape('body > *', {
 ######Finds all of the images on a webpage and replaces them with an image of monkeys. Try this on the NYU Shanghai website (http://shanghai.nyu.edu):
 <pre>
 artoo.scrape('img', function($) {
-	var imgSrc = "http://nyushima.s3.amazonaws.com/golden-snub-nose.jpg";
+	var imgSrc = 'http://nyushima.s3.amazonaws.com/golden-snub-nose.jpg';
 	$(this).attr('src', imgSrc);
 });
 </pre>
