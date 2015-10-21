@@ -85,7 +85,36 @@ artoo.scrape('a', {
 });
 </pre>
 
-###Example 4: Scrape Quoted Text
+###Example 3: Scrape Reddit Comments
+######Get comments and relevant information for all comments on a given Reddit page. Try this on Reddit (https://www.reddit.com/r/videos/comments/3pkqfj/motorcyclist_saves_kitten_on_intersection/).
+<pre>
+var redditComments = [];
+var author, dislikes, unvoted, likes, dateTime, md;
+artoo.scrape('.entry', {
+	text: function() {
+		author = $(this).find('.author').text();
+		dislikes = $(this).find('.dislikes').text();
+		unvoted = $(this).find('.unvoted').text();
+		likes = $(this).find('.likes').text();
+		dateTime = $(this).find('.dateTime').text();
+		md = $(this).find('.md').text();
+		if (author != '') {
+			var comment = {
+				'author': author,
+				'dislikes': dislikes,
+				'unvoted': unvoted,
+				'likes': likes,
+				'md': md	
+			};
+			redditComments.push(comment);
+		}
+	}
+}, function() {
+	artoo.savePrettyJson(redditComments);
+});
+</pre>
+
+###Example 5: Scrape Quoted Text
 ######Get any double quoted text from a page and save it to a JSON file. Try this on a Huffinton Post article (http://www.huffingtonpost.com/entry/orangutan-gito-iar-palm-oil-pet-rescue_56269558e4b0bce3470290c9).
 <pre>
 var quotes = [];
@@ -103,7 +132,7 @@ artoo.scrape('p', {
 });
 </pre>
 
-###Example 5: Scrape Text & Replace
+###Example 6: Scrape Text & Replace
 ######Finds a string and replaces it with another string. Try this on the Nikola Tesla Wikipedia page (https://en.wikipedia.org/wiki/Nikola_Tesla).
 <pre>
 artoo.scrape('body > *', {
@@ -119,7 +148,7 @@ artoo.scrape('body > *', {
 });
 </pre>
 
-###Example 6: Scrape Images & Replace
+###Example 7: Scrape Images & Replace
 ######Finds all of the images on a webpage and replaces them with an image of monkeys. Try this on the NYU Shanghai website (http://shanghai.nyu.edu).
 <pre>
 artoo.scrape('img', function($) {
