@@ -23,9 +23,6 @@ artoo-latest.min.js:2 [artoo]: info - jQuery was correctly injected into your pa
 artoo-latest.min.js:2 [artoo]: info - artoo is now good to go! "
 </pre>
 
-</br>
-</br>
-
 ##Examples
 
 ###Example 1: Simple Scrape
