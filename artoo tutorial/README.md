@@ -38,8 +38,6 @@ artoo.savePrettyJson);
 
 Chrome will begin to download a data.json file that has all of the headlines and links from the the Hacker News website.
 
-</br>
-
 ###Example 2: Scrape All The Things
 Now try a more complex scrape. While on the Hacker News website, paste this inside your console:
 
