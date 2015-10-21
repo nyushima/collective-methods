@@ -26,7 +26,7 @@ artoo-latest.min.js:2 [artoo]: info - artoo is now good to go! "
 ##Examples
 
 ###Example 1: Simple Scrape
-First test, go to http://hackernews.com, click on the artoo bookmark, and copy and paste this code into your javascript console:
+First test, go to Hacker News (http://hackernews.com), click on the artoo bookmark, and copy and paste this code into your javascript console:
 
 <pre>
 artoo.scrape('td.title:nth-child(3)', {
@@ -76,7 +76,7 @@ artoo.scrape('tr tr:has(td.title:has(a)):not(:last)', {
 ![alt meme](http://oi60.tinypic.com/12375mt.jpg)
 
 ###Example 3: Scrape Anchor Tags
-######Get the content, href, and class of all anchor tags on a page:
+######Get the content, href, and class of all anchor tags on a page. Try this on W3 Schools (http://www.w3schools.com):
 <pre>
 artoo.scrape('a', {
 	content: 'text', 
@@ -86,12 +86,13 @@ artoo.scrape('a', {
 </pre>
 
 ###Example 4: Scrape Quoted Text
-######Get any quoted text from a page and save it to a JSON file:
+######Get any double quoted text from a page and save it to a JSON file. Try this on a Huffinton Post article (http://www.huffingtonpost.com/entry/orangutan-gito-iar-palm-oil-pet-rescue_56269558e4b0bce3470290c9):
 <pre>
 var quotes = [];
 artoo.scrape('p', {
-	text: function($) {
+	text: function() {
 		var text = $(this).text();
+		text = text.replace(/“|”/g, '"');
 		var quote = text.match(/"(.*?)"/);
 		if (quote != null) {
 			quotes.push(quote[1]);
@@ -102,8 +103,8 @@ artoo.scrape('p', {
 });
 </pre>
 
-####Example 5: Scrape Text & Replace
-######Finds a string and replaces it with another string. Try it out on the Nikola Tesla Wikipedia page (https://en.wikipedia.org/wiki/Nikola_Tesla):
+###Example 5: Scrape Text & Replace
+######Finds a string and replaces it with another string. Try this on the Nikola Tesla Wikipedia page (https://en.wikipedia.org/wiki/Nikola_Tesla):
 <pre>
 artoo.scrape('body > *', {
 	text: function() {
@@ -119,14 +120,11 @@ artoo.scrape('body > *', {
 </pre>
 
 ###Example 6: Scrape Images & Replace
-######Finds all of the images on a webpage and replaces them with an image of a cat:
+######Finds all of the images on a webpage and replaces them with an image of monkeys. Try this on the NYU Shanghai website (http://shanghai.nyu.edu):
 <pre>
 artoo.scrape('img', function($) {
-	var imgSrc = "http://www.lorempixel.com/400/200/cats";
-	console.log($(this).context.src);
-	$(this).context.src = imgSrc;
-	return $(this).src = imgSrc;
-	//every time the object is found, return it with the image you want to replace
+	var imgSrc = "http://nyushima.s3.amazonaws.com/golden-snub-nose.jpg";
+	$(this).attr('src', imgSrc);
 });
 </pre>
 
