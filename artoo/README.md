@@ -138,7 +138,7 @@ artoo.scrape('p', {
 artoo.scrape('body > *', {
 	text: function() {
 		var searchFor = 'Nikola ';
-		var replaceWith = 'Kykle ';
+		var replaceWith = 'Kyle ';
 		var html = $(this).html();
 		if (html.search(searchFor) > -1) {
 			var newHtml = html.replace(new RegExp(searchFor, 'g'), replaceWith);
