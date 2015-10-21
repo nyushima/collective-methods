@@ -1,4 +1,4 @@
-#artoo.js Setup and Examples
+#artoo.js Tutorial
 
 ##How to Install artoo.js
 1. Go to [http://medialib.github.io/artoo/quick_start/](http://medialib.github.io/artoo/quick_start/)
