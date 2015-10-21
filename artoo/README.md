@@ -85,7 +85,7 @@ artoo.scrape('a', {
 });
 </pre>
 
-###Example 3: Scrape Reddit Comments
+###Example 4: Scrape Reddit Comments
 ######Get comments and relevant information for all comments on a given Reddit page and save it to a JSON file. Try this on Reddit (https://www.reddit.com/r/videos/comments/3pkqfj/motorcyclist_saves_kitten_on_intersection/).
 <pre>
 var redditComments = [];
