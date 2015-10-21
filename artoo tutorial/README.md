@@ -1,7 +1,7 @@
 #artoo.js Tutorial
 
 ##How to Install artoo.js
-1. Go to [http://medialib.github.io/artoo/quick_start/](http://medialib.github.io/artoo/quick_start/)
+1. Go to [http://medialab.github.io/artoo/quick_start/](http://medialab.github.io/artoo/quick_start/)
 
 2. Open Google Chrome, click the "View" menu, and select "Always show bookmark bar"
 
@@ -130,16 +130,4 @@ artoo.scrape('img', function($) {
 
 ##Documentation
 
-* artoo.scrape - scrapes data.
-
-* artoo.save - downloads the scraped data.
-
-* artoo.ajaxspider - crawls and triggers a series of ajax requests that passes the accumulated data to a final callback.
-
-* artoo.ajaxSniffer - helps you grab some of the circulating data of the web page you need to scrape.
-
-* artoo.ajaxSnigger.before - Gives you a chance to register a callback to be fired any time an ajax request is made by the page.
-
-* artoo.ajaxSnigger.after - Gives you a chance to register a callback to be fired any time an ajax request is completed by the page.
-
-* artoo.ajaxSnigger.off - Remove the given callback from the ajax sniffing stack.
+Visit the following page for detailed artoo.js documentation: [http://medialab.github.io/artoo/methods/](http://medialab.github.io/artoo/methods/)
