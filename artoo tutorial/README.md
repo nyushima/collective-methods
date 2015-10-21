@@ -1,8 +1,8 @@
-#artoo.js setup and examples
+#artoo.js Setup and Examples
 
 </br>
 
-##how to install
+##How to Install artoo.js
 1. Go to [http://medialib.github.io/artoo/quick_start/](http://medialib.github.io/artoo/quick_start/)
 
 2. Open Google Chrome, click the "View" menu, and select "Always show bookmark bar"
@@ -30,16 +30,15 @@ artoo-latest.min.js:2 [artoo]: info - artoo is now good to go! "
 
 ##Examples
 
-![alt meme](http://oi60.tinypic.com/12375mt.jpg)
-
 ###Example 1: Simple Scrape
 First test, go to http://hackernews.com, click on the artoo bookmark, and copy and paste this code into your javascript console:
 
 <pre>
 artoo.scrape('td.title:nth-child(3)', {
-  title: {sel: 'a'},
-  url: {sel: 'a', attr: 'href'}
-}, artoo.savePrettyJson);
+	title: {sel: 'a'},
+	url: {sel: 'a', attr: 'href'}
+}, 
+artoo.savePrettyJson);
 </pre>
 
 Chrome will begin to download a data.json file that has all of the headlines and links from the the Hacker News website.
@@ -51,49 +50,52 @@ Now try a more complex scrape. Paste this inside your console:
 
 <pre>
 artoo.scrape('tr tr:has(td.title:has(a)):not(:last)', {
-  title: {sel: '.title a'},
-  url: {sel: '.title a', attr: 'href'},
-  domain: {
-    sel: '.comhead',
-    method: function($) {
-      return $(this).text().trim().replace(/[\(\)]/g, '');
-    }
-  },
-  score: {
-    sel: '+ tr [id^=score]',
-    method: function($) {
-      return +$(this).text().replace(/ points/, '');
-    }
-  },
-  user: {
-    sel: '+ tr a[href^=user]',
-    method: function($) {
-      return $(this).length ? $(this).text() : null;
-    }
-  },
-  nb_comments: {
-    sel: '+ tr a[href^=item]',
-    method: function($) {
-      var nb = +$(this).text().replace(/ comments/, '');
-      return isNaN(nb) ? 0 : nb;
-    }
-  }
+	title: {sel: '.title a'},
+	url: {sel: '.title a', attr: 'href'},
+	domain: {
+		sel: '.comhead',
+		method: function($) {
+			return $(this).text().trim().replace(/[\(\)]/g, '');
+	    }
+	},
+	score: {
+		sel: '+ tr [id^=score]',
+		method: function($) {
+			return +$(this).text().replace(/ points/, '');
+	    }
+	},
+	user: {
+		sel: '+ tr a[href^=user]',
+    		method: function($) {
+      			return $(this).length ? $(this).text() : null;
+    		}
+  	},
+	nb_comments: {
+		sel: '+ tr a[href^=item]',
+		method: function($) {
+			var nb = +$(this).text().replace(/ comments/, '');
+			return isNaN(nb) ? 0 : nb;
+		}
+	}
 }, artoo.savePrettyJson);
 </pre>
 
+![alt meme](http://oi60.tinypic.com/12375mt.jpg)
+
 </br>
 
-###Example 3: Find Elements
-Get the content or properties of elements on a page 
+###Example 3: Scrape Anchor Tags
+######Get the content, href, and class of all anchor tags on a page:
 <pre>
-artoo.scrape('a.links_wrapper__link', {
+artoo.scrape('a', {
 	content: 'text', 
 	href: 'href', 
 	class: 'class'
 });
 </pre>
 
-Get any quoted text from a page and save it to a JSON file.
+###Example 4: Scrape Quoted Text
+######Get any quoted text from a page and save it to a JSON file:
 <pre>
 var quotes = [];
 artoo.scrape('p', {
@@ -108,71 +110,34 @@ artoo.scrape('p', {
 	artoo.savePrettyJson(quotes);
 });
 </pre>
-</br>
-Get all links from a page.
+
+####Example 5: Scrape Text & Replace
+######Finds a string and replaces it with another string. Try it out on the Nikola Tesla Wikipedia page (https://en.wikipedia.org/wiki/Nikola_Tesla):
 <pre>
-artoo.scrape('a', {
-	link: 'href'},
-artoo.savePrettyJson);
-</pre>
-
-###Example 4: Image Scrape
-######This example will scrape the images from a webpage.
-#####[Using reddit.com 'front page' as an example]
-<pre>
-var myJson = artoo.scrape('.thumbnail img', {
-  src: {attr: 'src'}
-}, artoo.savePrettyJson);
-</pre>
-This will give you a data.json file with a list of .jpg links.
-</br>
-<br>
-After generating the JSON file, run this python script to download the images to your hard-drive.</br><br>
-Create a python (.py) file named 'imagegrabber.py', copy and paste the code below. </br>
-<pre>
-import urllib
-import json
-from pprint import pprint
-
-with open('./data.json') as data_file: 
-    data = json.load(data_file)
-
-x = 0;
-for obj in data:
-    print("downloading: " + obj['src'])
-    urllib.urlretrieve("http:" + obj['src'], str(x) + ".png")
-    x = x + 1
-</pre>
-
-###Example 5: Image Replace
-######This examples finds all the images on a webpages and replaces the images with cats
-<pre>
-artoo.scrape('img', function($) {
-//$ references the JQuery object
-  var imgSrc = "http://www.lorempixel.com/400/200/cats";
-  console.log($(this).context.src);
-  $(this).context.src = imgSrc;
-  return $(this).src = imgSrc;
-//every time the object is found, return it with the image you want to replace
-});
-</pre>
-
-
-####Example 6: Find and Replace Text 
-######This example finds a word or sentence and replaces it with whatever text you want. Try it out on a Wikipedia page
-<pre>
-artoo.scrape('p, h1, a', {
-	text: function($) {
-		var text = $(this).text().toLowerCase();
-		var find = "new york university";
-		var newText = text.replace(find, "Matt Belanger");
-		$(this).context.innerText = newText;
-		console.log($(this));
-		return $(this).context.innerText = newText;
-
+artoo.scrape('body > *', {
+	text: function() {
+		var searchFor = 'Nikola ';
+		var replaceWith = 'Kykle ';
+		var html = $(this).html();
+		if (html.search(searchFor) > -1) {
+			var newHtml = html.replace(new RegExp(searchFor, 'g'), replaceWith);
+			$(this).html(newHtml);
+		}
 	}
 });
-  </pre>
+</pre>
+
+###Example 5: Scrape Images & Replace
+######Finds all of the images on a webpage and replaces them with an image of a cat:
+<pre>
+artoo.scrape('img', function($) {
+	var imgSrc = "http://www.lorempixel.com/400/200/cats";
+	console.log($(this).context.src);
+	$(this).context.src = imgSrc;
+	return $(this).src = imgSrc;
+	//every time the object is found, return it with the image you want to replace
+});
+</pre>
 
 ##Documentation
 
