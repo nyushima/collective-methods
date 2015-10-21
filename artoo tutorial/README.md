@@ -1,7 +1,7 @@
 #artoo.js Tutorial
 
 ##How to Install artoo.js
-1. Go to [http://medialab.github.io/artoo/quick_start/](http://medialab.github.io/artoo/quick_start/)
+1. Go to: [http://medialab.github.io/artoo/quick_start/](http://medialab.github.io/artoo/quick_start/)
 
 2. Open Google Chrome, click the "View" menu, and select "Always show bookmark bar"
 
