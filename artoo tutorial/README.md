@@ -1,7 +1,5 @@
 #artoo.js Setup and Examples
 
-</br>
-
 ##How to Install artoo.js
 1. Go to [http://medialib.github.io/artoo/quick_start/](http://medialib.github.io/artoo/quick_start/)
 
@@ -46,7 +44,7 @@ Chrome will begin to download a data.json file that has all of the headlines and
 </br>
 
 ###Example 2: Scrape All The Things
-Now try a more complex scrape. Paste this inside your console:
+Now try a more complex scrape. While on the Hacker News website, paste this inside your console:
 
 <pre>
 artoo.scrape('tr tr:has(td.title:has(a)):not(:last)', {
@@ -81,8 +79,6 @@ artoo.scrape('tr tr:has(td.title:has(a)):not(:last)', {
 </pre>
 
 ![alt meme](http://oi60.tinypic.com/12375mt.jpg)
-
-</br>
 
 ###Example 3: Scrape Anchor Tags
 ######Get the content, href, and class of all anchor tags on a page:
@@ -127,7 +123,7 @@ artoo.scrape('body > *', {
 });
 </pre>
 
-###Example 5: Scrape Images & Replace
+###Example 6: Scrape Images & Replace
 ######Finds all of the images on a webpage and replaces them with an image of a cat:
 <pre>
 artoo.scrape('img', function($) {
