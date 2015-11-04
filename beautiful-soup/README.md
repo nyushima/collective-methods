@@ -4,8 +4,11 @@
 ######All examples below assume that you are using Python 3.x. Computers running Mac OS ship with version 2.x of Python by default. Below are the instructions for installing Python 3.x on Mac OS and Windows computers.
 ######The documentation for Beautiful Soup is great, but it assumes that you are using a Linux based operating system for your computer. Since most of you are Mac OS or Windows users, the installation instructions below were created for those platforms.
 
+###General Installation
+1. Install or upgrade Python on your computer by visiting the following link: [https://www.python.org/downloads/](https://www.python.org/downloads/). Download and install Python 3.x for your operating system.
+
 ###Mac OS Installation
-1. Upgrade Python on your computer by visiting the following link: [https://www.python.org/downloads/](https://www.python.org/downloads/). After installation, Python 2.x will remain available via the python command, and Python 3.x will now be available via the python3 command.
+1. After installation, Python 2.x will remain available via the python command, and Python 3.x will now be available via the python3 command within the Terminal Application.
 
 2. Now you can install Beautiful Soup using pip, the Python package manager, using the following command:
 <br />
@@ -16,17 +19,30 @@ python3 -m pip install beautifulsoup4
 3. Now continue with General Installation instructions below.
 
 ###Windows Installation
-1. Coming soon...
+1. Python is available using the py command within the Command Prompt.
+
+2. Now you can install Beautiful Soup using pip, the Python package manager, using the following command:
+<br />
+<pre>
+py -m pip install beautifulsoup4
+</pre>
+
+3. Now continue with General Installation instructions below.
 
 ###General Installation
 1. Create a new file in your text editor of choice, give it whatever name you want, but be sure to save it with a .py extension. I suggest naming your first file soup-test.py and saving it into your user directory.
 
 2. Copy the Example 1 code below into your Python file and save it.
 
-3. Return to the Terminal Application (Mac OS) or Python Executable (Windows) and run the following command:
+3. Return to the Terminal Application (Mac OS) or Command Prompt (Windows) and run the following command:
 <br />
+#####Mac OS:
 <pre>
 python3 soup-test.py
+</pre>
+#####Windows:
+<pre>
+py soup-test.py
 </pre>
 
 4. You should see the following output:
