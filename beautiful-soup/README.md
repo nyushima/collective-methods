@@ -109,7 +109,7 @@ soup = BeautifulSoup(page.read())
 
 links = soup.find_all('a')
 for link in links:
- linkText = link.text or ''
+	linkText = link.text or ''
 	linkHref = link.get('href') or ''
 	print(linkText + ' | ' + linkHref)
 </pre>
