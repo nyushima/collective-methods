@@ -107,6 +107,7 @@ url = 'http://news.google.com'
 page = urllib.request.urlopen(url)
 soup = BeautifulSoup(page.read())
 links = soup.find_all('a')
+
 for link in links:
 	linkText = link.text or ''
 	linkHref = link.get('href') or ''
@@ -127,6 +128,7 @@ soup = BeautifulSoup(page.read())
 links = soup.find_all('a')
 csvFile = csv.writer(open('soup.csv', 'w'))
 csvFile.writerow(['text','href'])
+
 for link in links:
     linkText = link.text
     linkHref = link.get('href')
@@ -146,6 +148,7 @@ page = urllib.request.urlopen(url)
 soup = BeautifulSoup(page.read())
 links = soup.find_all('a')
 linksJson = []
+
 for link in links:
 	linkText = link.text
 	linkHref = link.get('href')
