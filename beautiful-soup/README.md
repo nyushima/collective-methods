@@ -13,7 +13,7 @@ Python 3.x will now be available via the python3 command while Python 2.x will r
 #####Windows:
 Python 3.x is available via the py command.
 
-3. Now you can install Beautiful Soup using pip, the Python package manager, using the following command:
+3. Now you can install Beautiful Soup using pip, the Python package manager, using the following command in either the  Terminal Application (Mac OS) or the Command Prompt (Windows):
 #####Mac OS:
 <pre>
 python3 -m pip install beautifulsoup4
