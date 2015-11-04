@@ -97,7 +97,7 @@ print(soup.find_all('a'))
 Chrome will begin to download a data.json file that has all of the headlines and links from the the Hacker News website.
 
 ###Example 2: Web Scrape
-This scape will use Beautiful Soup to scape data from a live webpage (http://news.google.com):
+This scape will use Beautiful Soup to scape all anchor tags from a live webpage (http://news.google.com):
 
 <pre>
 from bs4 import BeautifulSoup
@@ -112,6 +112,49 @@ for link in links:
 	linkText = link.text or ''
 	linkHref = link.get('href') or ''
 	print(linkText + ' | ' + linkHref)
+</pre>
+
+###Example 3: Web Scrape &amp; Save to CSV File
+This scape will use Beautiful Soup to scape all anchor tags from a live webpage (http://news.google.com) and save the result as a CSV file:
+
+<pre>
+from bs4 import BeautifulSoup
+import urllib.request
+import csv
+
+url = 'http://news.google.com'
+page = urllib.request.urlopen(url)
+soup = BeautifulSoup(page.read())
+
+links = soup.find_all('a')
+csvFile = csv.writer(open('soup.csv', 'w'))
+csvFile.writerow(['text','href'])
+for link in links:
+    linkText = link.text
+    linkHref = link.get('href')
+    csvFile.writerow([linkText,linkHref])
+</pre>
+
+###Example 4: Web Scrape &amp; Save to JSON File
+This scape will use Beautiful Soup to scape all anchor tags from a live webpage (http://news.google.com) and save the result as a JSON file:
+
+<pre>
+from bs4 import BeautifulSoup
+import urllib.request
+import json
+
+url = 'http://news.google.com'
+page = urllib.request.urlopen(url)
+soup = BeautifulSoup(page.read())
+
+linksJson = []
+for link in links:
+	linkText = link.text
+	linkHref = link.get('href')
+	linksJson.append({'text':linkText, 'href': linkHref})
+
+with open('soup.json', 'w') as jsonFile:
+	json.dump(linksJson, jsonFile)
 </pre>
 
 ##Documentation
