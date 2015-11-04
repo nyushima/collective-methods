@@ -110,7 +110,7 @@ print(soup.find_all('a'))
 
 Chrome will begin to download a data.json file that has all of the headlines and links from the the Hacker News website.
 
-###Example 2: Web Scrape
+###Example 2: Web Scrape of Anchor Tags
 This scape will use Beautiful Soup to scape all anchor tags from a live webpage (http://news.google.com):
 
 <pre>
@@ -128,7 +128,7 @@ for link in links:
 	print(linkText + ' | ' + linkHref)
 </pre>
 
-###Example 3: Web Scrape &amp; Save to CSV File
+###Example 3: Web Scrape of Anchor Tags &amp; Save to CSV File
 This scape will use Beautiful Soup to scape all anchor tags from a live webpage (http://news.google.com) and save the result as a CSV file:
 
 <pre>
@@ -149,7 +149,7 @@ for link in links:
     csvFile.writerow([linkText,linkHref])
 </pre>
 
-###Example 4: Web Scrape &amp; Save to JSON File
+###Example 4: Web Scrape of Anchor Tags &amp; Save to JSON File
 This scape will use Beautiful Soup to scape all anchor tags from a live webpage (http://news.google.com) and save the result as a JSON file:
 
 <pre>
