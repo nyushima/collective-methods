@@ -72,6 +72,12 @@ and they lived at the bottom of a well.
 [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;, &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;, &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]
 </pre>
 
+<style>
+img {
+	width: 100%;
+	height: auto;
+}
+</style>
 ![alt meme](http://cdn.meme.am/instances/500x/54583425.jpg)
 
 ##Examples
