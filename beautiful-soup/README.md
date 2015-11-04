@@ -19,47 +19,45 @@ python soup-test.py
 
 7. You should see the following output:
 <pre>
-<code>
-<html>
- <head>
-  <title>
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;title&gt;
    The Dormouse's story
-  </title>
- </head>
- <body>
-  <p class="title">
-   <b>
+  &lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p class=&quot;title&quot;&gt;
+   &lt;b&gt;
     The Dormouse's story
-   </b>
-  </p>
-  <p class="story">
+   &lt;/b&gt;
+  &lt;/p&gt;
+  &lt;p class=&quot;story&quot;&gt;
    Once upon a time there were three little sisters; and their names were
-   <a class="sister" href="http://example.com/elsie" id="link1">
+   &lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;
     Elsie
-   </a>
+   &lt;/a&gt;
    ,
-   <a class="sister" href="http://example.com/lacie" id="link2">
+   &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;
     Lacie
-   </a>
+   &lt;/a&gt;
    and
-   <a class="sister" href="http://example.com/tillie" id="link3">
+   &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;
     Tillie
-   </a>
+   &lt;/a&gt;
    ;
 and they lived at the bottom of a well.
-  </p>
-  <p class="story">
+  &lt;/p&gt;
+  &lt;p class=&quot;story&quot;&gt;
    ...
-  </p>
- </body>
-</html>
+  &lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
 ---
-<title>The Dormouse's story</title>
+&lt;title&gt;The Dormouse's story&lt;/title&gt;
 ---
-<a class="sister" href="http://example.com/elsie" id="link1">Elsie</a>
+&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;
 ---
-[<a class="sister" href="http://example.com/elsie" id="link1">Elsie</a>, <a class="sister" href="http://example.com/lacie" id="link2">Lacie</a>, <a class="sister" href="http://example.com/tillie" id="link3">Tillie</a>]
-</code>
+[&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;, &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;, &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]
 </pre>
 
 ##Examples
@@ -68,23 +66,22 @@ and they lived at the bottom of a well.
 First test, scapes various pieces of data from an internal HTML document fragment. Of limited use, but a good first test:
 
 <pre>
-<code>
 from bs4 import BeautifulSoup
 
-html_doc = """
-<html>
-<head>
-<title>The Dormouse's story</title>
-</head>
-<body>
-<p class="title"><b>The Dormouse's story</b></p>
-<p class="story">Once upon a time there were three little sisters; and their names were
-<a href="http://example.com/elsie" class="sister" id="link1">Elsie</a>,
-<a href="http://example.com/lacie" class="sister" id="link2">Lacie</a> and
-<a href="http://example.com/tillie" class="sister" id="link3">Tillie</a>;
-and they lived at the bottom of a well.</p>
-<p class="story">...</p>
-"""
+html_doc = &quot;&quot;&quot;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;The Dormouse's story&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p class=&quot;title&quot;&gt;&lt;b&gt;The Dormouse's story&lt;/b&gt;&lt;/p&gt;
+&lt;p class=&quot;story&quot;&gt;Once upon a time there were three little sisters; and their names were
+&lt;a href=&quot;http://example.com/elsie&quot; class=&quot;sister&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,
+&lt;a href=&quot;http://example.com/lacie&quot; class=&quot;sister&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt; and
+&lt;a href=&quot;http://example.com/tillie&quot; class=&quot;sister&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;;
+and they lived at the bottom of a well.&lt;/p&gt;
+&lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;
+&quot;&quot;&quot;
 
 soup = BeautifulSoup(html_doc, 'html.parser')
 
@@ -95,7 +92,6 @@ print('-----')
 print(soup.a)
 print('-----')
 print(soup.find_all('a'))
-</code>
 </pre>
 
 Chrome will begin to download a data.json file that has all of the headlines and links from the the Hacker News website.
