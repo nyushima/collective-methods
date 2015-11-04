@@ -7,9 +7,9 @@
 ###Installation
 1. Download and install Python 3.x for your operating system from the the following link: [https://www.python.org/downloads/](https://www.python.org/downloads/).
 
-2. After installation Python 3.x will be available to you from either the Terminal Application (Mac OS) or the Command Prompt (Windows):
+2. After installation, Python 3.x will be available to you from either the Terminal Application (Mac OS) or the Command Prompt (Windows):
 #####Mac OS:
-Python 3.x is now available via the python3 command while Python 2.x will remain available via the python.
+Python 3.x is now available via the python3 command, while Python 2.x will remain available via the python.
 #####Windows:
 Python 3.x is now available via the py command.
 
