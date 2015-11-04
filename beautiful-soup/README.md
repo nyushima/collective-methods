@@ -62,8 +62,8 @@ and they lived at the bottom of a well.
 
 ##Examples
 
-###Example 1: Simple Scrape
-First test, scapes various pieces of data from an internal HTML document fragment. Of limited use, but a good first test:
+###Example 1: Test Scrape
+First test, scapes various pieces of data (title, first anchor tag, and all anchor tags) from an HTML formatted string. Of limited use, but a good first test:
 
 <pre>
 from bs4 import BeautifulSoup
