@@ -23,7 +23,7 @@ python3 -m pip install beautifulsoup4
 py -m pip install beautifulsoup4
 </pre>
 
-4. Create a new file in your text editor of choice, give it whatever name you want, but be sure to save it with a .py extension. I suggest naming your first file soup-test.py and saving it into your user directory.
+4. Create a new file in your text editor of choice, give it whatever name you want, but be sure to save it with a .py extension. Try naming your first file soup-test.py and saving it into your user directory.
 
 5. Copy the Example 1 code below into your Python file and save it.
 
