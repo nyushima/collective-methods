@@ -13,7 +13,7 @@ sudo pip install beautifulsoup4
 
 5. Copy the Example 1 code below into your Python file and save it.
 
-6. Return to the Termincal Application or Command Prompt and run the following command:
+6. Return to the Terminal Application or Command Prompt and run the following command:
 <br />
 python soup-test.py
 
