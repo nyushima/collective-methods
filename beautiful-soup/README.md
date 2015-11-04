@@ -80,6 +80,8 @@ and they lived at the bottom of a well.
 [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;, &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;, &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]
 </pre>
 
+8. If you don't see the above output, something went wrong with your installation, or you may be working in the wrong directory from the Terminal Application or the Command Prompt. You can use the [cd](https://en.wikipedia.org/wiki/Cd_(command)) command to change your working directory. If you can't get this working within about half an hour reach out for help. There is no point wasting time at this stage when we can help you get setup.
+
 ![alt meme](http://cdn.meme.am/instances/500x/54583425.jpg)
 
 ##Examples
