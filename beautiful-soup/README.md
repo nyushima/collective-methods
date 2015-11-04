@@ -106,7 +106,12 @@ import urllib.request
 url = 'http://news.google.com'
 page = urllib.request.urlopen(url)
 soup = BeautifulSoup(page.read())
-print(soup.prettify())
+
+links = soup.find_all('a')
+for link in links:
+ linkText = link.text or ''
+	linkHref = link.get('href') or ''
+	print(linkText + ' | ' + linkHref)
 </pre>
 
 ##Documentation
