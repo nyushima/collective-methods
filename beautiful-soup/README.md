@@ -1,26 +1,19 @@
 #Beautiful Soup Tutorial
 
 ##Installation
+######All examples below assume that you are using Python 3.x. Computers running Mac OS ship with version 2.x of Python by default. Below are the instructions for installing Python 3.x on Mac OS and Windows computers.
 ######The documentation for Beautiful Soup is great, but it assumes that you are using a Linux based operating system for your computer. Since most of you are Mac OS or Windows users, the installation instructions below were created for those platforms.
 
 ###Mac OS Installation
 1. Upgrade Python on your computer by visiting the following link: [https://www.python.org/downloads/](https://www.python.org/downloads/). After installation, Python 2 will remain available via the python command, and Python 3 will now be available via the python3 command.
 
-2. Open the Terminal Application on your computer and run the following command to install pip, a tool for installing Python packages, like Beautiful Soup:
-<br />
-<pre>
-sudo easy_install pip
-</pre>
-
-3. Enter your username and password when prompted to do so.
-
-4. Now you can install Beautiful Soup using pip with the following command:
+2. Now you can install Beautiful Soup using pip, the Python package manager, using the following command:
 <br />
 <pre>
 python3 -m pip install beautifulsoup4
 </pre>
 
-5. Now continue with General Installation below.
+3. Now continue with General Installation instructions below.
 
 ###Windows Installation
 1. Coming soon...
