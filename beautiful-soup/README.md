@@ -182,7 +182,7 @@ with open('soup.json', 'w') as jsonFile:
 
 ##Resources
 
-• Beautiful Soup documentation: [http://www.crummy.com/software/BeautifulSoup/bs4/doc/](http://www.crummy.com/software/BeautifulSoup/bs4/doc/)
-• Python: URL handling modules: [https://docs.python.org/3.5/library/urllib.html](https://docs.python.org/3.5/library/urllib.html)
-• Python: CSV File Reading and Writing: [https://docs.python.org/3.5/library/csv.html](https://docs.python.org/3.5/library/csv.html)
-• Python: JSON encoder and decoder: [https://docs.python.org/3.5/library/json.html](https://docs.python.org/3.5/library/json.html)
+* Beautiful Soup documentation: [http://www.crummy.com/software/BeautifulSoup/bs4/doc/](http://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+* Python: URL handling modules: [https://docs.python.org/3.5/library/urllib.html](https://docs.python.org/3.5/library/urllib.html)
+* Python: CSV File Reading and Writing: [https://docs.python.org/3.5/library/csv.html](https://docs.python.org/3.5/library/csv.html)
+* Python: JSON encoder and decoder: [https://docs.python.org/3.5/library/json.html](https://docs.python.org/3.5/library/json.html)
