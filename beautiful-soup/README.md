@@ -1,7 +1,7 @@
 #Beautiful Soup Tutorial
 
 ##Installation
-######All examples below assume that you are using Python 3.x. Computers running Mac OS ship with version 2.x of Python by default. Follow the instructions to install Python 3.x on Mac OS or Windows computers.
+######All examples below assume that you are using Python 3.x. Computers running Mac OS ship with version 2.x of Python by default while Windows systems do not include Python by default. Follow the instructions to install Python 3.x on your computer.
 ######The documentation for Beautiful Soup is great, but it assumes that you are using a Linux based operating system for your computer. Since most of you are Mac OS or Windows users, the installation instructions below were created for those platforms.
 
 ###Installation
