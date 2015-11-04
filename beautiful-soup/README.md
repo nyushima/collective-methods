@@ -5,7 +5,7 @@
 ######All examples below assume that you are using Python 3.x. Computers running Mac OS ship with version 2.x of Python by default while Windows systems do not include Python by default. Follow the instructions to install Python 3.x on your computer.
 
 ###Installation
-1. Download Python 3.x for your operating system from the the following link: [https://www.python.org/downloads/](https://www.python.org/downloads/), and run the installer.
+1. Download and install Python 3.x for your operating system from the the following link: [https://www.python.org/downloads/](https://www.python.org/downloads/).
 
 2. After installation Python 3.x will be available to you from either the Terminal Application (Mac OS) or the Command Prompt (Windows):
 #####Mac OS:
