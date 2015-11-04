@@ -3,9 +3,11 @@
 ##Installation
 1. Upgrade Python on your computer by visiting the following link: [https://www.python.org/downloads/](https://www.python.org/downloads/)
 
-2. Open the Terminal Application (Mac OS) or the Command Promt (Windows) on your computer and type the following command to install Beautiful Soup:
+2. Open the Terminal Application (Mac OS) or the Command Promt (Windows) on your computer and run the following command to install Beautiful Soup:
 <br />
+<pre>
 sudo pip install beautifulsoup4
+</pre>
 
 3. Enter your username and password when prompted to do so.
 
@@ -15,7 +17,9 @@ sudo pip install beautifulsoup4
 
 6. Return to the Terminal Application or Command Prompt and run the following command:
 <br />
+<pre>
 python soup-test.py
+</pre>
 
 7. You should see the following output:
 <pre>
