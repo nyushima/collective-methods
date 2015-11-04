@@ -19,6 +19,7 @@ python soup-test.py
 
 7. You should see the following output:
 <pre>
+<code>
 <html>
  <head>
   <title>
@@ -58,6 +59,7 @@ and they lived at the bottom of a well.
 <a class="sister" href="http://example.com/elsie" id="link1">Elsie</a>
 ---
 [<a class="sister" href="http://example.com/elsie" id="link1">Elsie</a>, <a class="sister" href="http://example.com/lacie" id="link2">Lacie</a>, <a class="sister" href="http://example.com/tillie" id="link3">Tillie</a>]
+</code>
 </pre>
 
 ##Examples
@@ -66,6 +68,7 @@ and they lived at the bottom of a well.
 First test, scapes various pieces of data from an internal HTML document fragment. Of limited use, but a good first test:
 
 <pre>
+<code>
 from bs4 import BeautifulSoup
 
 html_doc = """
@@ -92,6 +95,7 @@ print('-----')
 print(soup.a)
 print('-----')
 print(soup.find_all('a'))
+</code>
 </pre>
 
 Chrome will begin to download a data.json file that has all of the headlines and links from the the Hacker News website.
