@@ -186,3 +186,4 @@ with open('soup.json', 'w') as jsonFile:
 * Python: URL handling modules: [https://docs.python.org/3.5/library/urllib.html](https://docs.python.org/3.5/library/urllib.html)
 * Python: CSV File Reading and Writing: [https://docs.python.org/3.5/library/csv.html](https://docs.python.org/3.5/library/csv.html)
 * Python: JSON encoder and decoder: [https://docs.python.org/3.5/library/json.html](https://docs.python.org/3.5/library/json.html)
+* JSONLint: The JSON Validator: [http://jsonlint.com](http://jsonlint.com)
