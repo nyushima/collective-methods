@@ -1,27 +1,35 @@
 #Beautiful Soup Tutorial
 
 ##Installation
-1. Upgrade Python on your computer by visiting the following link: [https://www.python.org/downloads/](https://www.python.org/downloads/)
+######The documentation for Beautiful Soup is great, but it assumes that you are using a Linux based operating system for your computer. Since most of you are Mac OS or Windows users, the installation instructions below were created for those platforms.
 
-2. Open the Terminal Application (Mac OS) or the Command Promt (Windows) on your computer and run the following command to install Beautiful Soup:
+1. Upgrade Python on your computer by visiting the following link: [https://www.python.org/downloads/](https://www.python.org/downloads/). After installation, Python 2 will remain available via the python command, and Python 3 will now be available via the python3 command.
+
+2. Open the Terminal Application (Mac OS) or the Command Promt (Windows) on your computer and run the following command to install pip, a tool for installing Python packages, like Beautiful Soup:
 <br />
 <pre>
-sudo pip install beautifulsoup4
+sudo easy_install pip
 </pre>
 
 3. Enter your username and password when prompted to do so.
 
-4. Create a new file in your text editor of choice, give it whatever name you want, but be sure to save it with a .py extension. I suggest naming your first file soup-test.py and saving it into your user directory.
-
-5. Copy the Example 1 code below into your Python file and save it.
-
-6. Return to the Terminal Application or Command Prompt and run the following command:
+4. Now you can install Beautiful Soup using pip with the following command:
 <br />
 <pre>
-python soup-test.py
+python3 -m pip install beautifulsoup4
 </pre>
 
-7. You should see the following output:
+5. Create a new file in your text editor of choice, give it whatever name you want, but be sure to save it with a .py extension. I suggest naming your first file soup-test.py and saving it into your user directory.
+
+6. Copy the Example 1 code below into your Python file and save it.
+
+7. Return to the Terminal Application or Command Prompt and run the following command:
+<br />
+<pre>
+python3 soup-test.py
+</pre>
+
+8. You should see the following output:
 <pre>
 &lt;html&gt;
  &lt;head&gt;
