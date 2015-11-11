@@ -76,7 +76,7 @@ The following table explains Regular Expressions basic syntax and options.
 </tr>
 
 <tr>
-<th colspan="2" class="header">Quantifiers can be used to specify how many instances of a character or group must be found to create a match.</th>
+<th colspan="2" class="header">Quantifiers are used to specify how many instances of a character or group must be found to create a match.</th>
 </tr>
 <tr>
 <td>?</td><td>defines preceeding character as optional</td>
