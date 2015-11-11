@@ -8,7 +8,8 @@ When the built in string functions of a given programming language are not enoug
 Regular Expressions are built into many programming languages. JavaScript has a [RegExp Object](http://www.w3schools.com/jsref/jsref_obj_regexp.asp) that is desined to work the the [String match() method](http://www.w3schools.com/jsref/jsref_match.asp). And Python has the [re module](https://docs.python.org/3.5/library/re.html).
 
 ###Cheat Sheet
-The following is a table representing different possibilites when creating Regular Expressions.
+The following tables represent different options when creating Regular Expressions.
+
 <table width="100%">
 <tr>
 <th colspan="2" style="background-color:black">Basic definitions</th>
@@ -19,10 +20,7 @@ The following is a table representing different possibilites when creating Regul
 <tr>
 <td>123…</td><td>use numbers to define numbers</td>
 </tr>
-</table>
 
-
-<table width="100%">
 <tr>
 <th colspan="2" class="header">Metacharacters define unique matches</th>
 </tr>
@@ -56,9 +54,7 @@ The following is a table representing different possibilites when creating Regul
 <tr>
 <td>^…$</td><td>defines start and end</td>
 </tr>
-</table>
 
-<table width="100%">
 <tr>
 <th colspan="2" class="header">Character classes define sets of characters any one of which can occur to create a match</th>
 </tr>
@@ -74,9 +70,7 @@ The following is a table representing different possibilites when creating Regul
 <tr>
 <td>[0-9]</td><td>defines a character class / set allowing any numbers 0 to 9</td>
 </tr>
-</table>
 
-<table width="100%">
 <tr>
 <th colspan="2" class="header">Capture groups</th>
 </tr>
@@ -92,9 +86,7 @@ The following is a table representing different possibilites when creating Regul
 <tr>
 <td>(abc|def)</td><td>defines a capture group of either abc or def</td>
 </tr>
-</table>
 
-<table width="100%">
 <tr>
 <th colspan="2" class="header">Repititions</th>
 </tr>
@@ -199,6 +191,7 @@ with open('quotes.json', 'w') as jsonFile:
 ##Resources
 
 * RegexOne: [http://regexone.com](http://regexone.com)
+* Regular-Expressions.info: [http://www.regular-expressions.info](http://www.regular-expressions.info)
 * Python: Regular Expression HOWTO: [https://docs.python.org/3.5/howto/regex.html#regex-howto](https://docs.python.org/3.5/howto/regex.html#regex-howto)
 * Python: re – Regular expression operations: [https://docs.python.org/3.5/library/re.html](https://docs.python.org/3.5/library/re.html)
 * Beautiful Soup: Kinds of filters: A regular expression [http://www.crummy.com/software/BeautifulSoup/bs4/doc/#kinds-of-filters](http://www.crummy.com/software/BeautifulSoup/bs4/doc/#kinds-of-filters)
