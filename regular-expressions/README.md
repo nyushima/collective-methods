@@ -1,7 +1,7 @@
 #Regular Expressions Tutorial
 
 ###Getting Started
-Regular Expressions are a character sequence that can be used to define patterns for matching and / or replacing a sub-string within a larger string. 
+Regular Expressions are a language that can be used to define patterns for matching and / or replacing a sub-string within a larger string. 
 
 When the built in string functions of a given programming language are not enough to accomplish what you need to do, Regular Expressions represent a powerful, yet supremely difficult way to work with strings.
 
