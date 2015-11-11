@@ -88,7 +88,7 @@ Regular Expressions are built into many programming languages. JavaScript has a 
 ##Examples
 
 ###Example 1: All Chinese All The Time
-Uses a regular expression to remove all non-Chinese characters from a webpage (http://search.jd.com/Search?keyword=iphone&enc=utf-8&wq=iphone&pvid=lklqiugi.hhf00p) and outputs the remaining Chinese:
+Uses a regular expression to scrape only Chinese characters from a webpage and outputs them (http://search.jd.com/Search?keyword=iphone&enc=utf-8&wq=iphone&pvid=lklqiugi.hhf00p):
 
 <pre>
 from bs4 import BeautifulSoup
