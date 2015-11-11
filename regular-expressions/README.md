@@ -9,15 +9,9 @@ Regular Expressions are built into many programming languages. JavaScript has a 
 
 ###Cheat Sheet
 The following is a table representing different possibilites when creating Regular Expressions.
-<style>
-td.header {
-background-color: black !important;
-color: white !important;
-}
-</style>
 <table>
 <tr>
-<td colspan="2" style="background-color:black">Basic definitions</td>
+<th colspan="2" style="background-color:black">Basic definitions</th>
 </tr>
 <tr>
 <td>abc…</td><td>use letters to define letters (case sensitive)</td>
@@ -25,8 +19,11 @@ color: white !important;
 <tr>
 <td>123…</td><td>use numbers to define numbers</td>
 </tr>
+</table>
+
+<table>
 <tr>
-<td colspan="2" class="header">Character classes define sets of characters any one of which can occur to create a match</td>
+<th colspan="2" class="header">Character classes define sets of characters any one of which can occur to create a match</th>
 </tr>
 <tr>
 <td>[abc]</td><td>defines a character class / set allowing only a, b, or c</td>
@@ -40,14 +37,20 @@ color: white !important;
 <tr>
 <td>[0-9]</td><td>defines a character class / set allowing any numbers 0 to 9</td>
 </tr>
+</table>
+
+<table>
 <tr>
 <td>\w</td><td>defines any alphanumeric character</td>
 </tr>
 <tr>
 <td>\W</td><td>defines any non-alphanumeric character</td>
 </tr>
+</table>
+
+<table>
 <tr>
-<td colspan="2" class="header">Repititions</td>
+<th colspan="2" class="header">Repititions</th>
 </tr>
 <tr>
 <td>{m}</td><td>defines m number of repetitions</td>
@@ -61,11 +64,17 @@ color: white !important;
 <tr>
 <td>+</td><td>defines one or more repetitions</td>
 </tr>
+</table>
+
+<table>
 <tr>
 <td>?</td><td>defines preceeding character as optional</td>
 </tr>
+</table>
+
+<table>
 <tr>
-<td colspan="2" class="header">Metacharacters</td>
+<th colspan="2" class="header">Metacharacters</th>
 </tr>
 <tr>
 <td>\d</td><td>defines any number (digit)</td>
@@ -88,8 +97,11 @@ color: white !important;
 <tr>
 <td>^…$</td><td>defines start and end</td>
 </tr>
+</table>
+
+<table>
 <tr>
-<td colspan="2" class="header">Capture groups</td>
+<th colspan="2" class="header">Capture groups</th>
 </tr>
 <tr>
 <td>(…)</td><td>defines a capture group</td>
