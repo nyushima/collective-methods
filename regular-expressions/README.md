@@ -3,7 +3,7 @@
 ###Getting Started
 Regular Expressions are a language that can be used to define patterns for matching and / or replacing a sub-string within a larger string. 
 
-When the built in string functions of a given programming language are not enough to accomplish what you need to do, Regular Expressions represent a powerful, yet supremely difficult way to work with strings.
+When the built in string functions of a given programming language are not enough to accomplish what you need to do, Regular Expressions represent a supremely powerful, yet often confounding way to work with strings.
 
 Regular Expressions are built into many programming languages. JavaScript has a [RegExp Object](http://www.w3schools.com/jsref/jsref_obj_regexp.asp) that is desined to work the the [String match() method](http://www.w3schools.com/jsref/jsref_match.asp). And Python has the [re module](https://docs.python.org/3.5/library/re.html).
 
