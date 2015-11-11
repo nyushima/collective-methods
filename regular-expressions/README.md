@@ -11,8 +11,8 @@ Regular Expressions are built into many programming languages. JavaScript has a 
 The following is a table representing different possibilites when creating Regular Expressions.
 <style>
 td.header {
-background-color: black;
-color: white;
+background-color: black !important;
+color: white !important;
 }
 </style>
 <table>
