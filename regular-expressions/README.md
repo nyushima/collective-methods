@@ -25,7 +25,7 @@ The following table explains Regular Expressions basic syntax and options.
 </tr>
 
 <tr>
-<th colspan="2" class="header">Character escapes, characters preceeded by a slash, are used to define unique matches.</th>
+<th colspan="2" class="header">Character escapes, characters preceeded by a slash, are used to define special matches.</th>
 </tr>
 <tr>
 <td>\w</td><td>matches any alphanumeric character</td>
