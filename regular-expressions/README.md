@@ -133,7 +133,7 @@ for chineseOnly in re.findall('[\u4e00-\u9fff]+', soup.get_text()):
 </pre>
 
 ###Example 2: Scrape Prices 
-Uses a regular expression to remove $, £, and ￥ from prices before calculating the sum and average prices listed on Amazon US, UK, or CN:
+Uses a regular expression to remove $, £, and ￥ from prices before calculating the sum and average from Amazon US, UK, or CN:
 
 <pre>
 from bs4 import BeautifulSoup
