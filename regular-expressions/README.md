@@ -8,6 +8,7 @@ When the built in string functions of a given programming language are not enoug
 Regular Expressions are built into many programming languages. JavaScript has a [RegExp Object](http://www.w3schools.com/jsref/jsref_obj_regexp.asp) that is desined to work the the [String match() method](http://www.w3schools.com/jsref/jsref_match.asp). And Python has the [re module](https://docs.python.org/3.5/library/re.html).
 
 ###Cheat Sheet
+The following is a table representing different possibilites when creating Regular Expressions.
 <table>
 <tr>
 <td>abc…</td><td>use letters to define letters (case sensitive)</td>
