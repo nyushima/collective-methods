@@ -168,7 +168,7 @@ print('Quantity: '+str(quantity)+', Sum: '+str(sum)+', Average: '+str(average))
 </pre>
 
 ###Example 3: Scrape Quoted Text
-Uses a regular expression to first sanitize smart quotes and then find all quoted text on a webpage (http://www.huffingtonpost.com/entry/orangutan-gito-iar-palm-oil-pet-rescue_56269558e4b0bce3470290c9):
+Uses a regular expression to first sanitize smart quotes and then find all quoted text on a webpage finally saving the quotes to a json file (http://www.huffingtonpost.com/entry/orangutan-gito-iar-palm-oil-pet-rescue_56269558e4b0bce3470290c9):
 
 <pre>
 from bs4 import BeautifulSoup
@@ -180,19 +180,19 @@ url = 'http://www.huffingtonpost.com/entry/orangutan-gito-iar-palm-oil-pet-rescu
 page = urllib.request.urlopen(url)
 soup = BeautifulSoup(page.read())
 
-html = re.sub('\“|\”', '"', str(soup))
+html = re.sub('“|”', '"', str(soup))
 soup = BeautifulSoup(html)
 
 quotesJson = []
 
 for tag in soup.find_all('p'):
-	matches = re.findall('\"(.+?)\"', tag.text)
-	for match in matches:
-		print(match)
-		quotesJson.append({'quote': match})
+    matches = re.findall('"(.+?)"', tag.text)
+    for match in matches:
+        print(match)
+        quotesJson.append({'quote': match})
 
 with open('quotes.json', 'w') as jsonFile:
-	json.dump(quotesJson, jsonFile)
+    json.dump(quotesJson, jsonFile)
 </pre>
 
 ##Resources
