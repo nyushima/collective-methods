@@ -15,10 +15,10 @@ The following table explains Regular Expressions basic syntax and options.
 <th colspan="2" style="background-color:black">Use characters to create matches.</th>
 </tr>
 <tr>
-<td>abc…</td><td>use letters to define letter matches (case sensitive)</td>
+<td>abc…</td><td>use letters to define alphabetical matches (case sensitive)</td>
 </tr>
 <tr>
-<td>123…</td><td>use numbers to define number matches</td>
+<td>123…</td><td>use numbers to define numerical matches</td>
 </tr>
 <tr>
 <td>.</td><td>matches any character</td>
