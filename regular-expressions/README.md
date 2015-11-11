@@ -116,7 +116,7 @@ The following table explains Regular Expressions basic syntax and options.
 ##Examples
 
 ###Example 1: All Chinese All The Time
-Uses a Regular Expression to scrape only Chinese characters (Unicode values between u4e00 and u9fff) from a webpage and output them to the terminal (http://search.jd.com/Search?keyword=iphone&enc=utf-8&wq=iphone&pvid=lklqiugi.hhf00p):
+Uses a Regular Expression to scrape only Chinese characters (Unicode(https://en.wikipedia.org/wiki/Unicode) values between u4e00 and u9fff) from a webpage and output them to the terminal (http://search.jd.com/Search?keyword=iphone&enc=utf-8&wq=iphone&pvid=lklqiugi.hhf00p):
 
 <pre>
 from bs4 import BeautifulSoup
