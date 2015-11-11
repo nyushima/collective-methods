@@ -53,10 +53,10 @@ The following table explains Regular Expressions basic syntax and options.
 <th colspan="2" class="header">Anchors specify a position in a string where a match must occur.</th>
 </tr>
 <tr>
-<td>^</td><td>defines the start/td>
+<td>^</td><td>defines the start</td>
 </tr>
 <tr>
-<td>$</td><td>defines the end/td>
+<td>$</td><td>defines the end</td>
 </tr>
 
 <tr>
