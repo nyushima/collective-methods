@@ -21,51 +21,10 @@ The following is a table representing different possibilites when creating Regul
 </tr>
 </table>
 
-<table width="100%">
-<tr>
-<th colspan="2" class="header">Character classes define sets of characters any one of which can occur to create a match</th>
-</tr>
-<tr>
-<td>[abc]</td><td>defines a character class / set allowing only a, b, or c</td>
-</tr>
-<tr>
-<td>[^abc]</td><td>defines a character class / set allowing neither a, b, nor c</td>
-</tr>
-<tr>
-<td>[a-z]</td><td>defines a character class / set allowing any letters a to z</td>
-</tr>
-<tr>
-<td>[0-9]</td><td>defines a character class / set allowing any numbers 0 to 9</td>
-</tr>
-</table>
 
 <table width="100%">
 <tr>
-<th colspan="2" class="header">Repititions</th>
-</tr>
-<tr>
-<td>{m}</td><td>defines m number of repetitions</td>
-</tr>
-<tr>
-<td>{m,n}</td><td>defines between m and n number of repetitions</td>
-</tr>
-<tr>
-<td>*</td><td>defines zero or more repetitions</td>
-</tr>
-<tr>
-<td>+</td><td>defines one or more repetitions</td>
-</tr>
-</table>
-
-<table>
-<tr>
-<td>?</td><td>defines preceeding character as optional</td>
-</tr>
-</table>
-
-<table width="100%">
-<tr>
-<th colspan="2" class="header">Metacharacters</th>
+<th colspan="2" class="header">Metacharacters define unique matches</th>
 </tr>
 <tr>
 <td>\w</td><td>defines any alphanumeric character</td>
@@ -92,7 +51,28 @@ The following is a table representing different possibilites when creating Regul
 <td>\S</td><td>defines any non-whitespace character</td>
 </tr>
 <tr>
+<td>?</td><td>defines preceeding character as optional</td>
+</tr>
+<tr>
 <td>^…$</td><td>defines start and end</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<th colspan="2" class="header">Character classes define sets of characters any one of which can occur to create a match</th>
+</tr>
+<tr>
+<td>[abc]</td><td>defines a character class / set allowing only a, b, or c</td>
+</tr>
+<tr>
+<td>[^abc]</td><td>defines a character class / set allowing neither a, b, nor c</td>
+</tr>
+<tr>
+<td>[a-z]</td><td>defines a character class / set allowing any letters a to z</td>
+</tr>
+<tr>
+<td>[0-9]</td><td>defines a character class / set allowing any numbers 0 to 9</td>
 </tr>
 </table>
 
@@ -111,6 +91,24 @@ The following is a table representing different possibilites when creating Regul
 </tr>
 <tr>
 <td>(abc|def)</td><td>defines a capture group of either abc or def</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<th colspan="2" class="header">Repititions</th>
+</tr>
+<tr>
+<td>{m}</td><td>defines m number of repetitions</td>
+</tr>
+<tr>
+<td>{m,n}</td><td>defines between m and n number of repetitions</td>
+</tr>
+<tr>
+<td>*</td><td>defines zero or more repetitions</td>
+</tr>
+<tr>
+<td>+</td><td>defines one or more repetitions</td>
 </tr>
 </table>
 
