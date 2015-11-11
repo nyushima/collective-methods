@@ -9,9 +9,15 @@ Regular Expressions are built into many programming languages. JavaScript has a 
 
 ###Cheat Sheet
 The following is a table representing different possibilites when creating Regular Expressions.
+<style>
+td.header {
+background-color: black;
+color: white;
+}
+</style>
 <table>
 <tr>
-<td colspan="2">Basic definitions</td>
+<td colspan="2" class="header">Basic definitions</td>
 </tr>
 <tr>
 <td>abc…</td><td>use letters to define letters (case sensitive)</td>
@@ -20,19 +26,7 @@ The following is a table representing different possibilites when creating Regul
 <td>123…</td><td>use numbers to define numbers</td>
 </tr>
 <tr>
-<td>\d</td><td>defines any number (digit)</td>
-</tr>
-<tr>
-<td>\D</td><td>defines any non-number</td>
-</tr>
-<tr>
-<td>.</td><td>defines any character</td>
-</tr>
-<tr>
-<td>\.</td><td>defines a period</td>
-</tr>
-<tr>
-<td colspan="2">Character classes define sets of characters any one of which can occur to create a match</td>
+<td colspan="2" class="header">Character classes define sets of characters any one of which can occur to create a match</td>
 </tr>
 <tr>
 <td>[abc]</td><td>defines a character class / set allowing only a, b, or c</td>
@@ -53,7 +47,7 @@ The following is a table representing different possibilites when creating Regul
 <td>\W</td><td>defines any non-alphanumeric character</td>
 </tr>
 <tr>
-<td colspan="2">Repititions</td>
+<td colspan="2" class="header">Repititions</td>
 </tr>
 <tr>
 <td>{m}</td><td>defines m number of repetitions</td>
@@ -71,7 +65,19 @@ The following is a table representing different possibilites when creating Regul
 <td>?</td><td>defines preceeding character as optional</td>
 </tr>
 <tr>
-<td colspan="2">Metacharacters</td>
+<td colspan="2" class="header">Metacharacters</td>
+</tr>
+<tr>
+<td>\d</td><td>defines any number (digit)</td>
+</tr>
+<tr>
+<td>\D</td><td>defines any non-number</td>
+</tr>
+<tr>
+<td>.</td><td>defines any character</td>
+</tr>
+<tr>
+<td>\.</td><td>defines a period</td>
 </tr>
 <tr>
 <td>\s</td><td>defines whitespace (spaces, tabs, carriage returns, etc.)</td>
@@ -83,7 +89,7 @@ The following is a table representing different possibilites when creating Regul
 <td>^…$</td><td>defines start and end</td>
 </tr>
 <tr>
-<td colspan="2">Capture groups</td>
+<td colspan="2" class="header">Capture groups</td>
 </tr>
 <tr>
 <td>(…)</td><td>defines a capture group</td>
