@@ -1,6 +1,39 @@
 #Regular Expressions Tutorial
 
-##Getting Started
+###Getting Started
+Regular Expressions are a character sequence that can be used to define patterns for matching and / or replacing a sub-string within a larger string. 
+
+When the built in string functions of a given programming language are not enough to accomplish what you need to do, Regular Expressions represent a powerful, yet supremely difficult way to work with strings.
+
+Regular Expressions are built into many programming languages. JavaScript has a [RegExp Object](http://www.w3schools.com/jsref/jsref_obj_regexp.asp) that is desined to work the the [String match() method](http://www.w3schools.com/jsref/jsref_match.asp). And Python has the [re module](https://docs.python.org/3.5/library/re.html).
+
+###Cheat Sheet
+<pre>
+abc…	use letters to define letters (case sensitive)
+123…	use numbers to define numbers
+\d	defines any number (digit)
+\D	defines any non-number
+.	defines any character
+\.	defines a period
+[abc]	defines a character class / set allowing only a, b, or c
+[^abc]	defines a character class / set allowing neither a, b, nor c
+[a-z]	defines a character class / set allowing any letters a to z
+[0-9]	defines a character class / set allowing any numbers 0 to 9
+\w	defines any alphanumeric character
+\W	defines any non-alphanumeric character
+{m}	defines m number of repetitions
+{m,n}	defines between m and n number of repetitions
+*	defines zero or more repetitions
++	defines one or more repetitions
+?	defines preceeding character as optional
+\s	defines whitespace (spaces, tabs, carriage returns, etc.)
+\S	defines any non-whitespace character
+^…$	defines start and end
+(…)	defines a capture group
+(a(bc))	defines a capture sub-group
+(.*)	defines a capture all group
+(abc|def)	defines a capture group of either abc or def
+</pre>
 
 ![alt meme](http://www.quickmeme.com/img/28/28267ccca83716ccddc3a2e194e8b0052cae3a204de3f37928a20e8ff4f0ee65.jpg)
 
