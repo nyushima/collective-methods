@@ -168,7 +168,7 @@ print('Quantity: '+str(quantity)+', Sum: '+str(sum)+', Average: '+str(average))
 </pre>
 
 ###Example 3: Scrape Quoted Text
-Uses a Regular Expression to first sanitize smart quotes, then finds all quoted text on a webpage, and finally saving the quotes to a json file (http://www.huffingtonpost.com/entry/orangutan-gito-iar-palm-oil-pet-rescue_56269558e4b0bce3470290c9):
+Uses a Regular Expression to first sanitize smart quotes, then finds all quoted text on a webpage, and finally saves the collected quotes to a json file (http://www.huffingtonpost.com/entry/orangutan-gito-iar-palm-oil-pet-rescue_56269558e4b0bce3470290c9):
 
 <pre>
 from bs4 import BeautifulSoup
