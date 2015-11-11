@@ -13,73 +13,73 @@ Regular Expressions are built into many programming languages. JavaScript has a 
 <td>abc…</td><td>use letters to define letters (case sensitive)</td>
 </tr>
 <tr>
-123…</td><td>use numbers to define numbers</td>
+<td>123…</td><td>use numbers to define numbers</td>
 </tr>
 <tr>
-\d</td><td>defines any number (digit)</td>
+<td>\d</td><td>defines any number (digit)</td>
 </tr>
 <tr>
-\D</td><td>defines any non-number</td>
+<td>\D</td><td>defines any non-number</td>
 </tr>
 <tr>
-.</td><td>defines any character</td>
+<td>.</td><td>defines any character</td>
 </tr>
 <tr>
-\.</td><td>defines a period</td>
+<td>\.</td><td>defines a period</td>
 </tr>
 <tr>
-[abc]</td><td>defines a character class / set allowing only a, b, or c</td>
+<td>[abc]</td><td>defines a character class / set allowing only a, b, or c</td>
 </tr>
 <tr>
-[^abc]</td><td>defines a character class / set allowing neither a, b, nor c</td>
+<td>[^abc]</td><td>defines a character class / set allowing neither a, b, nor c</td>
 </tr>
 <tr>
-[a-z]</td><td>defines a character class / set allowing any letters a to z</td>
+<td>[a-z]</td><td>defines a character class / set allowing any letters a to z</td>
 </tr>
 <tr>
-[0-9]</td><td>defines a character class / set allowing any numbers 0 to 9</td>
+<td>[0-9]</td><td>defines a character class / set allowing any numbers 0 to 9</td>
 </tr>
 <tr>
-\w</td><td>defines any alphanumeric character</td>
+<td>\w</td><td>defines any alphanumeric character</td>
 </tr>
 <tr>
-\W</td><td>defines any non-alphanumeric character</td>
+<td>\W</td><td>defines any non-alphanumeric character</td>
 </tr>
 <tr>
-{m}</td><td>defines m number of repetitions</td>
+<td>{m}</td><td>defines m number of repetitions</td>
 </tr>
 <tr>
-{m,n}</td><td>defines between m and n number of repetitions</td>
+<td>{m,n}</td><td>defines between m and n number of repetitions</td>
 </tr>
 <tr>
-*</td><td>defines zero or more repetitions</td>
+<td>*</td><td>defines zero or more repetitions</td>
 </tr>
 <tr>
-+</td><td>defines one or more repetitions</td>
+<td>+</td><td>defines one or more repetitions</td>
 </tr>
 <tr>
-?</td><td>defines preceeding character as optional</td>
+<td>?</td><td>defines preceeding character as optional</td>
 </tr>
 <tr>
-\s</td><td>defines whitespace (spaces, tabs, carriage returns, etc.)</td>
+<td>\s</td><td>defines whitespace (spaces, tabs, carriage returns, etc.)</td>
 </tr>
 <tr>
-\S</td><td>defines any non-whitespace character</td>
+<td>\S</td><td>defines any non-whitespace character</td>
 </tr>
 <tr>
-^…$</td><td>defines start and end</td>
+<td>^…$</td><td>defines start and end</td>
 </tr>
 <tr>
-(…)</td><td>defines a capture group</td>
+<td>(…)</td><td>defines a capture group</td>
 </tr>
 <tr>
-(a(bc))</td><td>defines a capture sub-group</td>
+<td>(a(bc))</td><td>defines a capture sub-group</td>
 </tr>
 <tr>
-(.*)</td><td>defines a capture all group</td>
+<td>(.*)</td><td>defines a capture all group</td>
 </tr>
 <tr>
-(abc|def)</td><td>defines a capture group of either abc or def</td>
+<td>(abc|def)</td><td>defines a capture group of either abc or def</td>
 </tr>
 </table>
 
