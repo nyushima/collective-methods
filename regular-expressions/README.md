@@ -8,32 +8,80 @@ When the built in string functions of a given programming language are not enoug
 Regular Expressions are built into many programming languages. JavaScript has a [RegExp Object](http://www.w3schools.com/jsref/jsref_obj_regexp.asp) that is desined to work the the [String match() method](http://www.w3schools.com/jsref/jsref_match.asp). And Python has the [re module](https://docs.python.org/3.5/library/re.html).
 
 ###Cheat Sheet
-<pre>
-abc…	use letters to define letters (case sensitive)
-123…	use numbers to define numbers
-\d	defines any number (digit)
-\D	defines any non-number
-.	defines any character
-\.	defines a period
-[abc]	defines a character class / set allowing only a, b, or c
-[^abc]	defines a character class / set allowing neither a, b, nor c
-[a-z]	defines a character class / set allowing any letters a to z
-[0-9]	defines a character class / set allowing any numbers 0 to 9
-\w	defines any alphanumeric character
-\W	defines any non-alphanumeric character
-{m}	defines m number of repetitions
-{m,n}	defines between m and n number of repetitions
-*	defines zero or more repetitions
-+	defines one or more repetitions
-?	defines preceeding character as optional
-\s	defines whitespace (spaces, tabs, carriage returns, etc.)
-\S	defines any non-whitespace character
-^…$	defines start and end
-(…)	defines a capture group
-(a(bc))	defines a capture sub-group
-(.*)	defines a capture all group
-(abc|def)	defines a capture group of either abc or def
-</pre>
+<table>
+<tr>
+<td>abc…</td><td>use letters to define letters (case sensitive)</td>
+</tr>
+<tr>
+123…</td><td>use numbers to define numbers</td>
+</tr>
+<tr>
+\d</td><td>defines any number (digit)</td>
+</tr>
+<tr>
+\D</td><td>defines any non-number</td>
+</tr>
+<tr>
+.</td><td>defines any character</td>
+</tr>
+<tr>
+\.</td><td>defines a period</td>
+</tr>
+<tr>
+[abc]</td><td>defines a character class / set allowing only a, b, or c</td>
+</tr>
+<tr>
+[^abc]</td><td>defines a character class / set allowing neither a, b, nor c</td>
+</tr>
+<tr>
+[a-z]</td><td>defines a character class / set allowing any letters a to z</td>
+</tr>
+<tr>
+[0-9]</td><td>defines a character class / set allowing any numbers 0 to 9</td>
+</tr>
+<tr>
+\w</td><td>defines any alphanumeric character</td>
+</tr>
+<tr>
+\W</td><td>defines any non-alphanumeric character</td>
+</tr>
+<tr>
+{m}</td><td>defines m number of repetitions</td>
+</tr>
+<tr>
+{m,n}</td><td>defines between m and n number of repetitions</td>
+</tr>
+<tr>
+*</td><td>defines zero or more repetitions</td>
+</tr>
+<tr>
++</td><td>defines one or more repetitions</td>
+</tr>
+<tr>
+?</td><td>defines preceeding character as optional</td>
+</tr>
+<tr>
+\s</td><td>defines whitespace (spaces, tabs, carriage returns, etc.)</td>
+</tr>
+<tr>
+\S</td><td>defines any non-whitespace character</td>
+</tr>
+<tr>
+^…$</td><td>defines start and end</td>
+</tr>
+<tr>
+(…)</td><td>defines a capture group</td>
+</tr>
+<tr>
+(a(bc))</td><td>defines a capture sub-group</td>
+</tr>
+<tr>
+(.*)</td><td>defines a capture all group</td>
+</tr>
+<tr>
+(abc|def)</td><td>defines a capture group of either abc or def</td>
+</tr>
+</table>
 
 ![alt meme](http://www.quickmeme.com/img/28/28267ccca83716ccddc3a2e194e8b0052cae3a204de3f37928a20e8ff4f0ee65.jpg)
 
