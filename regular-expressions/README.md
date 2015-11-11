@@ -12,7 +12,7 @@ The following tables represent different options when creating Regular Expressio
 
 <table width="100%">
 <tr>
-<th colspan="2" style="background-color:black">Basic definitions</th>
+<th colspan="2" style="background-color:black">Use characters to match characters.</th>
 </tr>
 <tr>
 <td>abc…</td><td>use letters to define letters (case sensitive)</td>
@@ -22,7 +22,7 @@ The following tables represent different options when creating Regular Expressio
 </tr>
 
 <tr>
-<th colspan="2" class="header">Metacharacters define unique matches</th>
+<th colspan="2" class="header">Character escapes, characters preceeded with a slash, are used to define unique matches.</th>
 </tr>
 <tr>
 <td>\w</td><td>defines any alphanumeric character</td>
@@ -48,15 +48,19 @@ The following tables represent different options when creating Regular Expressio
 <tr>
 <td>\S</td><td>defines any non-whitespace character</td>
 </tr>
+
 <tr>
-<td>?</td><td>defines preceeding character as optional</td>
+<th colspan="2" class="header">Anchors specify a position in a string where a match must occur.</th>
 </tr>
 <tr>
-<td>^…$</td><td>defines start and end</td>
+<td>^</td><td>defines the start/td>
+</tr>
+<tr>
+<td>$</td><td>defines the end/td>
 </tr>
 
 <tr>
-<th colspan="2" class="header">Character classes define sets of characters any one of which can occur to create a match</th>
+<th colspan="2" class="header">Character classes define sets of characters any one of which can occur to create a match.</th>
 </tr>
 <tr>
 <td>[abc]</td><td>defines a character class / set allowing only a, b, or c</td>
@@ -72,7 +76,26 @@ The following tables represent different options when creating Regular Expressio
 </tr>
 
 <tr>
-<th colspan="2" class="header">Capture groups</th>
+<th colspan="2" class="header">Quantifiers can be used to specify how many instances of a character or group must be found to create a match.</th>
+</tr>
+<tr>
+<td>?</td><td>defines preceeding character as optional</td>
+</tr>
+<tr>
+<td>*</td><td>defines zero or more repetitions</td>
+</tr>
+<tr>
+<td>+</td><td>defines one or more repetitions</td>
+</tr>
+<tr>
+<td>{m}</td><td>defines m number of repetitions</td>
+</tr>
+<tr>
+<td>{m,n}</td><td>defines between m and n number of repetitions</td>
+</tr>
+
+<tr>
+<th colspan="2" class="header">Grouping allows you to apply quantifiers or alterations to only a part of your Regular Expression.</th>
 </tr>
 <tr>
 <td>(…)</td><td>defines a capture group</td>
@@ -85,22 +108,6 @@ The following tables represent different options when creating Regular Expressio
 </tr>
 <tr>
 <td>(abc|def)</td><td>defines a capture group of either abc or def</td>
-</tr>
-
-<tr>
-<th colspan="2" class="header">Repititions</th>
-</tr>
-<tr>
-<td>{m}</td><td>defines m number of repetitions</td>
-</tr>
-<tr>
-<td>{m,n}</td><td>defines between m and n number of repetitions</td>
-</tr>
-<tr>
-<td>*</td><td>defines zero or more repetitions</td>
-</tr>
-<tr>
-<td>+</td><td>defines one or more repetitions</td>
 </tr>
 </table>
 
