@@ -22,7 +22,7 @@ The following tables represent different options when creating Regular Expressio
 </tr>
 
 <tr>
-<th colspan="2" class="header">Character escapes, characters preceeded with a slash, are used to define unique matches.</th>
+<th colspan="2" class="header">Character escapes, characters preceeded by a slash, are used to define unique matches.</th>
 </tr>
 <tr>
 <td>\w</td><td>defines any alphanumeric character</td>
