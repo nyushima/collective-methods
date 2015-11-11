@@ -116,7 +116,7 @@ The following table explains Regular Expressions basic syntax and options.
 ##Examples
 
 ###Example 1: All Chinese All The Time
-Uses a regular expression to scrape only Chinese characters from a webpage and outputs them (http://search.jd.com/Search?keyword=iphone&enc=utf-8&wq=iphone&pvid=lklqiugi.hhf00p):
+Uses a Regular Expression to scrape only Chinese characters (Unicode values between u4e00 and u9fff) from a webpage and output them to the terminal (http://search.jd.com/Search?keyword=iphone&enc=utf-8&wq=iphone&pvid=lklqiugi.hhf00p):
 
 <pre>
 from bs4 import BeautifulSoup
@@ -133,7 +133,7 @@ for chineseOnly in re.findall('[\u4e00-\u9fff]+', soup.get_text()):
 </pre>
 
 ###Example 2: Scrape Prices 
-Uses a regular expression to remove $, £, and ￥ from prices before calculating the sum and average from Amazon US, UK, or CN:
+Uses a Regular Expression to remove $, £, and ￥ from prices before calculating the sum and average from Amazon US, UK, or CN:
 
 <pre>
 from bs4 import BeautifulSoup
@@ -168,7 +168,7 @@ print('Quantity: '+str(quantity)+', Sum: '+str(sum)+', Average: '+str(average))
 </pre>
 
 ###Example 3: Scrape Quoted Text
-Uses a regular expression to first sanitize smart quotes and then find all quoted text on a webpage finally saving the quotes to a json file (http://www.huffingtonpost.com/entry/orangutan-gito-iar-palm-oil-pet-rescue_56269558e4b0bce3470290c9):
+Uses a Regular Expression to first sanitize smart quotes and then find all quoted text on a webpage finally saving the quotes to a json file (http://www.huffingtonpost.com/entry/orangutan-gito-iar-palm-oil-pet-rescue_56269558e4b0bce3470290c9):
 
 <pre>
 from bs4 import BeautifulSoup
