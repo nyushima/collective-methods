@@ -9,7 +9,7 @@ Regular Expressions are built into many programming languages. JavaScript has a 
 
 ###Cheat Sheet
 The following is a table representing different possibilites when creating Regular Expressions.
-<table>
+<table width="100%">
 <tr>
 <th colspan="2" style="background-color:black">Basic definitions</th>
 </tr>
@@ -21,7 +21,7 @@ The following is a table representing different possibilites when creating Regul
 </tr>
 </table>
 
-<table>
+<table width="100%">
 <tr>
 <th colspan="2" class="header">Character classes define sets of characters any one of which can occur to create a match</th>
 </tr>
@@ -39,16 +39,7 @@ The following is a table representing different possibilites when creating Regul
 </tr>
 </table>
 
-<table>
-<tr>
-<td>\w</td><td>defines any alphanumeric character</td>
-</tr>
-<tr>
-<td>\W</td><td>defines any non-alphanumeric character</td>
-</tr>
-</table>
-
-<table>
+<table width="100%">
 <tr>
 <th colspan="2" class="header">Repititions</th>
 </tr>
@@ -72,9 +63,15 @@ The following is a table representing different possibilites when creating Regul
 </tr>
 </table>
 
-<table>
+<table width="100%">
 <tr>
 <th colspan="2" class="header">Metacharacters</th>
+</tr>
+<tr>
+<td>\w</td><td>defines any alphanumeric character</td>
+</tr>
+<tr>
+<td>\W</td><td>defines any non-alphanumeric character</td>
 </tr>
 <tr>
 <td>\d</td><td>defines any number (digit)</td>
@@ -99,7 +96,7 @@ The following is a table representing different possibilites when creating Regul
 </tr>
 </table>
 
-<table>
+<table width="100%">
 <tr>
 <th colspan="2" class="header">Capture groups</th>
 </tr>
