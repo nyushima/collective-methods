@@ -15,38 +15,38 @@ The following tables represent different options when creating Regular Expressio
 <th colspan="2" style="background-color:black">Use characters to match characters.</th>
 </tr>
 <tr>
-<td>abc…</td><td>use letters to define letters (case sensitive)</td>
+<td>abc…</td><td>use letters to define letter matches (case sensitive)</td>
 </tr>
 <tr>
-<td>123…</td><td>use numbers to define numbers</td>
+<td>123…</td><td>use numbers to define number matches</td>
 </tr>
 
 <tr>
 <th colspan="2" class="header">Character escapes, characters preceeded by a slash, are used to define unique matches.</th>
 </tr>
 <tr>
-<td>\w</td><td>defines any alphanumeric character</td>
+<td>\w</td><td>matches any alphanumeric character</td>
 </tr>
 <tr>
-<td>\W</td><td>defines any non-alphanumeric character</td>
+<td>\W</td><td>matches any non-alphanumeric character</td>
 </tr>
 <tr>
-<td>\d</td><td>defines any number (digit)</td>
+<td>\d</td><td>matches any number (digit)</td>
 </tr>
 <tr>
-<td>\D</td><td>defines any non-number</td>
+<td>\D</td><td>matches any non-number</td>
 </tr>
 <tr>
-<td>.</td><td>defines any character</td>
+<td>.</td><td>matches any character</td>
 </tr>
 <tr>
-<td>\.</td><td>defines a period</td>
+<td>\.</td><td>matches a period</td>
 </tr>
 <tr>
-<td>\s</td><td>defines whitespace (spaces, tabs, carriage returns, etc.)</td>
+<td>\s</td><td>matches whitespace (spaces, tabs, carriage returns, etc.)</td>
 </tr>
 <tr>
-<td>\S</td><td>defines any non-whitespace character</td>
+<td>\S</td><td>matches any non-whitespace character</td>
 </tr>
 
 <tr>
