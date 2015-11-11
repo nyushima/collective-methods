@@ -17,7 +17,7 @@ color: white !important;
 </style>
 <table>
 <tr>
-<td colspan="2" class="header">Basic definitions</td>
+<td colspan="2" style="background-color:black">Basic definitions</td>
 </tr>
 <tr>
 <td>abc…</td><td>use letters to define letters (case sensitive)</td>
