@@ -139,19 +139,7 @@ result = re.search(regex, string)
 print(result)
 </pre>
 
-###Example 3: Using Repititions
-Uses a Regular Expression and re.findall() to match 'boat' or 'oat' (matched from the word 'floating'). The '?' character makes the 'b' optional.
-
-<pre>
-import re
-
-string = '"The boatman then gently guided the raft across. They saw a dead body floating. At the sight of this, the Master was greatly frightened. But Sun smiled and said, "Master do not be alarmed! That corpse is none other than your own."'
-regex = 'b?oat'
-result = re.findall(regex, string)
-print(result)
-</pre>
-
-###Example 4: Using Character Classes
+###Example 3: Using Character Classes
 Uses a Regular Expression and re.findall() to match both upper and lower case versions of a word, 'Wife' or 'wife', by using a character class. '[' and ']' are used to create the character class.
 
 <pre>
@@ -163,7 +151,7 @@ result = re.findall(regex, string)
 print(result)
 </pre>
 
-###Example 5: Using Groups
+###Example 4: Using Groups
 Uses a regular expression and re.findall() to match upper and lower case versions of the words, 'Monkey', 'monkey', 'Monster', and 'monster', by using a group. '(' and ')' are used to create the group. The '|' character additionally defines a conditional, meaning the regular expression will match both 'key' and 'ster'. '?:' defines a non-capturing group, meaning the regular expression will capture the entire expression. Without the use of '?:' you would get matches for 'Monkey', 'key', monster', and 'ster'.
 
 <pre>
@@ -171,6 +159,18 @@ import re
 
 string = '"What you must do," said Monkey, "is lure the monster from its hiding place, but be certain it is a fight you can survive."'
 regex = '[Mm]on(?:key|ster)'
+result = re.findall(regex, string)
+print(result)
+</pre>
+
+###Example 5: Using Repititions
+Uses a Regular Expression and re.findall() to match 'boat' or 'float'. The '?' character makes the 'b', 'f', and 'l' characters optional.
+
+<pre>
+import re
+
+string = '"The boatman then gently guided the raft across. They saw a dead body floating. At the sight of this, the Master was greatly frightened. But Sun smiled and said, "Master do not be alarmed! That corpse is none other than your own."'
+regex = '(?:b?|f?l?)oat'
 result = re.findall(regex, string)
 print(result)
 </pre>
