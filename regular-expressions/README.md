@@ -128,7 +128,7 @@ print(result)
 </pre>
 
 ###Example 2: Match a Word Anywhere Within a String
-Uses a Regular Expression and re.search() to match a specific word, 'difficult', at the beginning of a string.
+Uses a Regular Expression and re.search() to match a specific word, 'difficult', anywhere within a string.
 
 <pre>
 import re
