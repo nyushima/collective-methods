@@ -134,7 +134,7 @@ Uses a Regular Expression and re.search() to match a specific word, 'difficult',
 import re
 
 string = 'Nothing in this world is difficult, but thinking makes it seem so. Where there is true will, there is always a way.'
-regex = 'Nothing'
+regex = 'difficult'
 result = re.search(regex, string)
 print(result)
 </pre>
@@ -152,7 +152,7 @@ print(result)
 </pre>
 
 ###Example 4: Using Character Classes
-Uses a Regular Expression and re.findall() to match both upper and lower case versions of a word, 'Wife' or 'wife', anywhere within a string by using a character class.
+Uses a Regular Expression and re.findall() to match both upper and lower case versions of a word, 'Wife' or 'wife', by using a character class. '[' and ']' are used to create the character class.
 
 <pre>
 import re
@@ -164,7 +164,7 @@ print(result)
 </pre>
 
 ###Example 5: Using Groups
-Uses a regular expression and re.findall() to match upper and lower case versions of the words, 'Monkey', 'monkey', 'Monster', and 'monster', anywhere within a string by using a character class. The '|' character defines a conditional, meaning the regular expression will match both 'key' and 'ster'. '?:' defines a non-capturing group, meaning the regular expression will capture the entire expression. Without the use of '?:' you would get matches for 'Monkey', 'key', monster', and 'ster'.
+Uses a regular expression and re.findall() to match upper and lower case versions of the words, 'Monkey', 'monkey', 'Monster', and 'monster', by using a group. '(' and ')' are used to create the group. The '|' character additionally defines a conditional, meaning the regular expression will match both 'key' and 'ster'. '?:' defines a non-capturing group, meaning the regular expression will capture the entire expression. Without the use of '?:' you would get matches for 'Monkey', 'key', monster', and 'ster'.
 
 <pre>
 import re
@@ -176,7 +176,7 @@ print(result)
 </pre>
 
 ###Example 6: Using Anchors
-Uses a regular expression and re.findall() to match upper and lower case versions of the word, 'He' or 'he'. The ^ character ensures that the match only occures at the beginning of the string, preventing the second 'he' in the sample string from matching.
+Uses a regular expression and re.findall() to match upper and lower case versions of the word, 'He' or 'he'. The '^' character ensures that the match only occures at the beginning of the string, preventing the second 'he' in the sample string from matching.
 
 <pre>
 import re
