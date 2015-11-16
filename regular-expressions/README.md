@@ -113,9 +113,83 @@ The following table explains Regular Expressions basic syntax and options.
 
 ![alt meme](http://www.quickmeme.com/img/28/28267ccca83716ccddc3a2e194e8b0052cae3a204de3f37928a20e8ff4f0ee65.jpg)
 
-##Examples
+##Python RegEx Examples
 
-###Example 1: All Chinese All The Time
+###Example 1: Match a Word at the Beginning of a String
+Uses a Regular Expression and re.match() to match a specific word, 'Nothing', at the beginning of a string.
+
+<pre>
+import re
+
+string = 'Nothing in this world is difficult, but thinking makes it seem so. Where there is true will, there is always a way.'
+regex = 'Nothing'
+result = re.match(regex, string)
+print(result)
+</pre>
+
+###Example 2: Match a Word Anywhere Within a String
+Uses a Regular Expression and re.search() to match a specific word, 'difficult', at the beginning of a string.
+
+<pre>
+import re
+
+string = 'Nothing in this world is difficult, but thinking makes it seem so. Where there is true will, there is always a way.'
+regex = 'Nothing'
+result = re.search(regex, string)
+print(result)
+</pre>
+
+###Example 3: Using Repititions
+Uses a Regular Expression and re.findall() to match 'boat' or 'oat' (matched from the word 'floating'). The '?' character makes the 'b' optional.
+
+<pre>
+import re
+
+string = '"The boatman then gently guided the raft across. They saw a dead body floating. At the sight of this, the Master was greatly frightened. But Sun smiled and said, "Master do not be alarmed! That corpse is none other than your own."'
+regex = 'b?oat'
+result = re.findall(regex, string)
+print(result)
+</pre>
+
+###Example 4: Using Character Classes
+Uses a Regular Expression and re.findall() to match both upper and lower case versions of a word, 'Wife' or 'wife', anywhere within a string by using a character class.
+
+<pre>
+import re
+
+string = '"Wife indeed!" laughed Monkey. "You haven\'t got a wife now. There are some sorts of Taoists that are family men; but who ever heard of a Buddhist priest calmly talking about his wife?"'
+regex = '[Ww]ife'
+result = re.findall(regex, string)
+print(result)
+</pre>
+
+###Example 5: Using Groups
+Uses a regular expression and re.findall() to match upper and lower case versions of the words, 'Monkey', 'monkey', 'Monster', and 'monster', anywhere within a string by using a character class. The '|' character defines a conditional, meaning the regular expression will match both 'key' and 'ster'. '?:' defines a non-capturing group, meaning the regular expression will capture the entire expression. Without the use of '?:' you would get matches for 'Monkey', 'key', monster', and 'ster'.
+
+<pre>
+import re
+
+string = '"What you must do," said Monkey, "is lure the monster from its hiding place, but be certain it is a fight you can survive."'
+regex = '[Mm]on(?:key|ster)'
+result = re.findall(regex, string)
+print(result)
+</pre>
+
+###Example 6: Using Anchors
+Uses a regular expression and re.findall() to match upper and lower case versions of the word, 'He' or 'he'. The ^ character ensures that the match only occures at the beginning of the string, preventing the second 'he' in the sample string from matching.
+
+<pre>
+import re
+
+string = 'Hero is he alone who vies with powers supreme!'
+regex = '^[Hh]e'
+result = re.findall(regex, string)
+print(result)
+</pre>
+
+##RegEx Examples With Beautiful Soup
+
+###Example 7: All Chinese All The Time
 Uses a Regular Expression to scrape only Chinese characters ([Unicode](https://en.wikipedia.org/wiki/Unicode) values between u4e00 and u9fff) from a webpage and output them to the terminal (http://search.jd.com/Search?keyword=iphone&enc=utf-8&wq=iphone&pvid=lklqiugi.hhf00p):
 
 <pre>
@@ -132,7 +206,7 @@ for chineseOnly in re.findall('[\u4e00-\u9fff]+', soup.get_text()):
     print(chineseOnly)
 </pre>
 
-###Example 2: Scrape Prices 
+###Example 8: Scrape Prices 
 Uses a Regular Expression to remove $, £, and ￥ from prices before calculating the sum and average from Amazon US, UK, or CN:
 
 <pre>
@@ -167,7 +241,7 @@ average = sum/quantity;
 print('Quantity: '+str(quantity)+', Sum: '+str(sum)+', Average: '+str(average))
 </pre>
 
-###Example 3: Scrape Quoted Text
+###Example 9: Scrape Quoted Text
 Uses a Regular Expression to first sanitize smart quotes, then finds all quoted text on a webpage, and finally saves the collected quotes to a json file (http://www.huffingtonpost.com/entry/orangutan-gito-iar-palm-oil-pet-rescue_56269558e4b0bce3470290c9):
 
 <pre>
@@ -198,7 +272,10 @@ with open('quotes.json', 'w') as jsonFile:
 ##Resources
 
 * RegexOne: [http://regexone.com](http://regexone.com)
+* Regex Pal: [http://www.regexpal.com](http://www.regexpal.com)
 * Regular-Expressions.info: [http://www.regular-expressions.info](http://www.regular-expressions.info)
+* Python Regular Expressiosn: [http://www.tutorialspoint.com/python/python_reg_expressions.htm](http://www.tutorialspoint.com/python/python_reg_expressions.htm)
+* 7 Python Regular Expressions Examples – Re Match Search FindAll: [http://www.thegeekstuff.com/2014/07/python-regex-examples/](http://www.thegeekstuff.com/2014/07/python-regex-examples/)
 * Python: Regular Expression HOWTO: [https://docs.python.org/3.5/howto/regex.html#regex-howto](https://docs.python.org/3.5/howto/regex.html#regex-howto)
 * Python: re – Regular expression operations: [https://docs.python.org/3.5/library/re.html](https://docs.python.org/3.5/library/re.html)
 * Beautiful Soup: Kinds of filters: A regular expression [http://www.crummy.com/software/BeautifulSoup/bs4/doc/#kinds-of-filters](http://www.crummy.com/software/BeautifulSoup/bs4/doc/#kinds-of-filters)
