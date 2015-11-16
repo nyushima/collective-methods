@@ -8,7 +8,7 @@ When the built in string functions of a given programming language are not enoug
 Regular Expressions are built into many programming languages. JavaScript has a [RegExp Object](http://www.w3schools.com/jsref/jsref_obj_regexp.asp) that is designed to work the the [String match() method](http://www.w3schools.com/jsref/jsref_match.asp). While Python has the [re module](https://docs.python.org/3.5/library/re.html).
 
 ##Syntax
-The following table explains Regular Expressions basic syntax and options.
+The following table explains the basic syntax of Regular Expressions.
 
 <table width="100%">
 <tr>
