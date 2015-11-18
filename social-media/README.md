@@ -146,7 +146,7 @@ Now you can try some of the Facebook Platform Python SDK examples below.
 
 ##Facebook Platform Python SDK Examples
 
-###Example 5: Post a Status Update
+###Example 5: Post a Status Update & Like It
 Uses Facebook Platform Python SDK to post a status update to your Facebook account.
 
 <pre>
@@ -157,28 +157,63 @@ access_token = ''
 
 graph = facebook.GraphAPI(access_token)
 
-#Enter a status update.
-status_update = 'I love Collective Methods!'
+status_update = 'I love Collective Methods! 2'
 post = graph.put_wall_post(message=status_update)
 print(post)
+
+like = graph.put_like(object_id=post['id'])
+print(like)
 </pre>
 
-###Example 6: Facebook Platform Python SDK Example
-Description goes here.
+###Example 6: Get Posts for a Given Page or User
+Uses Facebook Platform Python SDK to return recent posts from a given page or user, in this case nyushima.
 
 <pre>
+import facebook
+
+#Enter your Facebook Graph API Access Token below.
+access_token = 'CAACEdEose0cBACJrgBZB6orx5E4K3kM8mcw6HI2iQtNZBvABu1cQ9GKgdNTLVLRdonkNEIlzlki3zvtx9EAxxKV3mv6TriRPowTkuZAuRidUZAx6psVaYevwUTAYdiX963IfUmDTdpNtZBDia5vRdSwe6sCHD0gpXxiHl7TbK0e1XiDzpk2qLDeCKDIEuUADCm8BnPAlXZAAZDZD'
+
+graph = facebook.GraphAPI(access_token)
+
+#Enter the Facebook page name or user id (not name or username) of the page or person you'd like to return.
+user = 'nyushima'
+profile = graph.get_object(user)
+posts = graph.get_connections(profile['id'], 'posts')
+print(posts['data'][0]['message'])
+
+def print_post_details(post):
+	print(post['id'])
+	print(post['message'])
+	print(post['picture'])
+	print(post['likes'])
+
+[print_post_details(post=post) for post in posts['data']]
 </pre>
 
-###Example 7: Facebook Platform Python SDK Example
-Description goes here.
+###Example 7: Get Friends of a Given User
+Uses Facebook Platform Python SDK to return friends a given user.
 
 <pre>
-</pre>
+import facebook
 
-###Example 8: Facebook Platform Python SDK Example
-Description goes here.
+#Enter your Facebook Graph API Access Token below.
+access_token = ''
 
-<pre>
+graph = facebook.GraphAPI(access_token)
+
+#Enter the Facebook user id (not name or username) of the person you'd like to return friends of.
+user_id = ''
+friends = graph.get_connections(id=user_id, connection_name='friends')
+
+print(friends['summary']['total_count'])
+
+def print_friend_details(friend):
+	print('-----')
+	print(friend['id'])
+	print(friend['name'])
+
+[print_friend_details(friend=friend) for friend in friends['data']]
 </pre>
 
 ##Resources
