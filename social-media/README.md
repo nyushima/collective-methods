@@ -29,7 +29,7 @@ Uses Tweepy to post a tweet to your Twitter account.
 <pre>
 import tweepy
 
-#Enter the details for your app below.
+#Enter the keys, tokens and secrets for your app below.
 consumer_key = ''
 consumer_secret = ''
 access_token = ''
@@ -39,7 +39,9 @@ auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
-status = api.update_status(status='Tweepy is awesome!')
+#Enter a tweet.
+tweet_text = 'I love Collective Methods!'
+status = api.update_status(status=tweet_text)
 print(status)
 </pre>
 
@@ -144,10 +146,21 @@ Now you can try some of the Facebook Platform Python SDK examples below.
 
 ##Facebook Platform Python SDK Examples
 
-###Example 5: Facebook Platform Python SDK Example
-Description goes here.
+###Example 5: Post a Status Update
+Uses Facebook Platform Python SDK to post a status update to your Facebook account.
 
 <pre>
+import facebook
+
+#Enter your Facebook Graph API Access Token below.
+access_token = ''
+
+graph = facebook.GraphAPI(access_token)
+
+#Enter a status update.
+status_update = 'I love Collective Methods!'
+post = graph.put_wall_post(message=status_update)
+print(post)
 </pre>
 
 ###Example 6: Facebook Platform Python SDK Example
