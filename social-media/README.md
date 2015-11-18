@@ -25,7 +25,7 @@ Once you have registered your app, you need the following pieces of information,
 
 Now you can try some of the Tweepy examples below.
 
-![alt meme](http://cdn.meme.am/instances/500x/53023067.jpg)
+![alt meme](http://cdn.meme.am/instances2/500x/2940191.jpg)
 
 ##Tweepy Examples
 
