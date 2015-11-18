@@ -1,7 +1,7 @@
 #Data Mining Social Media Tutorial
 
 ##Overview
-Mining data from social media websites is in some ways easier than scraping data from most websites through the availability of official APIs. Major social media websites, including Twitter and Facebook, have official APIs. These APIs provide an interface for the data of the website, and they allow you to make requests for specific pieces of information through the API.
+Mining data from social media websites is in some ways easier than scraping data from most websites through the availability of official APIs. Major social media websites, including Twitter and Facebook, have official APIs. These APIs provide an interface for the data particular to that website, and they allow you to make requests for specific pieces of information through the API.
 
 Pyhon has many libraries devoted to facilitating access to these and other APIs. In this class, we'll examine two libraries, one called [Tweepy](http://www.tweepy.org) that is aimed at Twitter data mining, and the other called [Facebook Platform Python SDK](http://www.pythonforfacebook.com) that is aimed at Facebook data mining.
 
