@@ -23,7 +23,7 @@ Now you can try some of the Tweepy examples below.
 
 ##Tweepy Examples
 
-###Example 1: Post a Tweet to Twitter
+###Example 1: Post a Tweet
 Uses Tweepy to post a tweet to your Twitter account.
 
 <pre>
@@ -43,7 +43,7 @@ status = api.update_status(status='Tweepy is awesome!')
 print(status)
 </pre>
 
-###Example 2: Return Recent Tweets About Monkeys
+###Example 2: Get Tweets About Monkeys
 Uses Tweepy to return recent tweets about monkeys and outputs details about the tweet including the name, username, date, content, hashtags, etc.
 
 <pre>
