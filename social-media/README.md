@@ -9,7 +9,7 @@ Below are instructions and examples for working with both of these libraries.
 
 ##Getting Started With Tweepy
 
-Tweepy(http://www.tweepy.org) is a Python library for accessing the [Twitter API](https://dev.twitter.com), facilitating access to Twitter data including information about users, tweets, trends, and relationships.
+[Tweepy](http://www.tweepy.org) is a Python library for accessing the [Twitter API](https://dev.twitter.com), facilitating access to Twitter data including information about users, tweets, trends, and relationships.
 
 ###Tweepy Installation
 To install Tweepy using Python 3.x we can use pip, the Python package manager, by issuing the following command in the Terminal:
@@ -136,7 +136,7 @@ for trend in trends[0]['trends']:
 Facebook Platform Python SDK is a Python library for accessing the [Facebook Graph API](https://developers.facebook.com/docs/graph-api), facilitating access to Facebook data including information about users, posts, pages, and relationships.
 
 ###Facebook Platform Python SDK Installation
-Unforutnately, the current release version of Facebook Platform Python SDK is not compatible with Python 3, so we can't use the Python package manager, pip, to install the package. Instead, we need to install the latest version from the GitHub repository. To do this, first download the zip file from here(https://github.com/pythonforfacebook/facebook-sdk/archive/master.zip) and extract it. Assuming the file was downloaded and extracted into your downloads folder, issue the following command in the Terminal:
+Unforutnately, the current release version of Facebook Platform Python SDK is not compatible with Python 3, so we can't use the Python package manager, pip, to install the package. Instead, we need to install the latest version from the GitHub repository. To do this, first download the zip file from [here](https://github.com/pythonforfacebook/facebook-sdk/archive/master.zip) and extract it. Assuming the file was downloaded and extracted into your downloads folder, issue the following command in the Terminal:
 
 <pre>
 python3 ~/Downloads/facebook-sdk-master/setup.py
