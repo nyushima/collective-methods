@@ -133,7 +133,7 @@ for trend in trends[0]['trends']:
 
 ##Getting Started With Facebook Platform Python SDK
 
-Facebook Platform Python SDK is a Python library for accessing the [Facebook Graph API](https://developers.facebook.com/docs/graph-api), facilitating access to Facebook data including information about users, posts, pages, and relationships.
+[Facebook Platform Python SDK](http://www.pythonforfacebook.com) is a Python library for accessing the [Facebook Graph API](https://developers.facebook.com/docs/graph-api), facilitating access to Facebook data including information about users, posts, pages, and relationships.
 
 ###Facebook Platform Python SDK Installation
 Unforutnately, the current release version of Facebook Platform Python SDK is not compatible with Python 3, so we can't use the Python package manager, pip, to install the package. Instead, we need to install the latest version from the GitHub repository. To do this, first download the zip file from [here](https://github.com/pythonforfacebook/facebook-sdk/archive/master.zip) and extract it. Assuming the file was downloaded and extracted into your downloads folder, issue the following command in the Terminal:
