@@ -183,6 +183,7 @@ posts = graph.get_connections(profile['id'], 'posts')
 print(posts['data'][0]['message'])
 
 def print_post_details(post):
+	print('-----')
 	print(post['id'])
 	print(post['message'])
 	print(post['picture'])
