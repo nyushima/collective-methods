@@ -59,7 +59,8 @@ auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
-search_term = 'monkeys'
+#Enter the term for your search.
+searchTerm = 'monkeys'
 
 for tweet in tweepy.Cursor(api.search, q=(search_term)).items(10):
 	print('Name:', tweet.author.name)
