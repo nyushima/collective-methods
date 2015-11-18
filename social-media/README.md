@@ -172,7 +172,7 @@ Uses Facebook Platform Python SDK to return recent posts from a given page or us
 import facebook
 
 #Enter your Facebook Graph API Access Token below.
-access_token = 'CAACEdEose0cBACJrgBZB6orx5E4K3kM8mcw6HI2iQtNZBvABu1cQ9GKgdNTLVLRdonkNEIlzlki3zvtx9EAxxKV3mv6TriRPowTkuZAuRidUZAx6psVaYevwUTAYdiX963IfUmDTdpNtZBDia5vRdSwe6sCHD0gpXxiHl7TbK0e1XiDzpk2qLDeCKDIEuUADCm8BnPAlXZAAZDZD'
+access_token = ''
 
 graph = facebook.GraphAPI(access_token)
 
