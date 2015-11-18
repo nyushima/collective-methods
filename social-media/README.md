@@ -81,7 +81,7 @@ Uses Tweepy to return recent tweets by a given user, in this case base2john.
 <pre>
 import tweepy
 
-#Enter the keys, tokens and secrets for your app below.
+#Enter the details for your app below.
 consumer_key = ''
 consumer_secret = ''
 access_token = ''
@@ -91,7 +91,7 @@ auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
-#The username of the user who's timeline you want to retreive
+#Enter the username of the user who's timeline you want to retreive
 username = 'base2john'
 
 tweets = api.user_timeline(username)
@@ -105,7 +105,7 @@ Uses Tweepy to return recent trends for a given location, in this case New York 
 <pre>
 import tweepy
 
-#Enter the keys, tokens and secrets for your app below.
+#Enter the details for your app below.
 consumer_key = ''
 consumer_secret = ''
 access_token = ''
@@ -115,7 +115,7 @@ auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
-#A woeid is a Where On Earth Identifier that identifies any feature on Earth. This is the woeid for New York City.
+#Enter a woeid. A woeid is a Where On Earth Identifier that identifies any feature on Earth. This is the woeid for New York City.
 woeid = 2459115
 
 trends = api.trends_place(woeid)
