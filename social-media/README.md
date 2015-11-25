@@ -148,8 +148,6 @@ To use the Facebook Graph API you need an access token. To get an access token, 
 
 Now you can try some of the Facebook Platform Python SDK examples below.
 
-![alt meme]()
-
 ##Facebook Platform Python SDK Examples
 
 ###Example 5: Post a Status Update & Like It
