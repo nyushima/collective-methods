@@ -31,7 +31,8 @@ links = soup.find_all('img', src=True)
 for link in links:
     print (link['src'])
   
-3. This one should scrape links from 9gag (http://www.9gag.com), but I'm having parser issues
+3. This one should scrape links from 9gag (http://www.9gag.com) and save them as csv files, but I'm
+   having parser issues.
 
 from bs4 import BeautifulSoup
 import urllib.request
