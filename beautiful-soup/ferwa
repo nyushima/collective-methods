@@ -1,0 +1,43 @@
+1. This code scrapes all the links off of deviantART (http://www.deviantart.com)
+
+from bs4 import BeautifulSoup
+import urllib.request
+
+url = 'http://www.deviantart.com'
+page = urllib.request.urlopen(url)
+soup = BeautifulSoup(page.read())
+links = soup.find_all('a')
+
+for links in soup.find_all('a'):
+    print (links.get('href'))
+  
+2. This one scrapes all the images off of The Oatmeal (http://www.theoatmeal.com)
+
+from bs4 import BeautifulSoup
+import urllib.request
+
+url = 'http://www.theoatmeal.com'
+page = urllib.request.urlopen(url)
+soup = BeautifulSoup(page.read())
+links = soup.find_all('img', src=True)
+
+for link in links:
+    print (link['src'])
+  
+3. This one should scrape links from 9gag (http://www.9gag.com), but I'm having parser issues
+
+from bs4 import BeautifulSoup
+import urllib.request
+import csv
+
+url = 'http://www.9gag.com'
+page = urllib.request.urlopen(url)
+soup = BeautifulSoup(page.read())
+links = soup.find_all('a')
+csvFile = csv.writer(open('soup.csv', 'w'))
+csvFile.writerow(['text','href'])
+
+for link in links:
+    linkText = link.text
+    linkHref = link.get('href')
+    csvFile.writerow([linkText,linkHref])
