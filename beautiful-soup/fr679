@@ -41,4 +41,3 @@ for link in links:
     linkText = link.text
     linkHref = link.get('href')
     csvFile.writerow([linkText,linkHref])
-    
