@@ -1,3 +1,10 @@
+I tried so hard to write code that was a bit more original, but I feel like I failed hard at this.
+It was also kind of like going around in circles, getting the same errors (please, someone, explain
+how this parser deal works because I've tried changing it up to no avail), and eventually I just
+went back to the basic examples and worked on changing them up for different websites, but even this
+took plenty of time. I feel like there's just a missing step between the assignment's 'intro' to
+Beautiful Soup and its application; there should be more information about the hows.
+
 1. This code scrapes all the links off of deviantART (http://www.deviantart.com)
 
 from bs4 import BeautifulSoup
