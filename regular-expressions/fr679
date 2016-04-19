@@ -1,0 +1,12 @@
+from bs4 import BeautifulSoup
+import urllib.request
+import re
+
+url = 'http://www.forever21.com/UK/Product/Category.aspx?br=f21&category=top&pagesize=120&page=1'
+page = urllib.request.urlopen(url)
+soup = BeautifulSoup(page.read(),"html.parser")
+
+for item in soup.find_all(class_='item_name_c'):
+	result = re.findall('\w+', soup.get_text())
+	print (result)
+	print(soup.prettify())
