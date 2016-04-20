@@ -1,0 +1,20 @@
+I feel like I understood the tutorial pretty well. Had a few struggles with the code but I do feel like I get it. At first I wanted to capture all the links on the New York Times website that mentioned Bernie Sanders. Then I realized that this might be a bit too ambitious since it is two different parts. But I gave it a few shots before adjusting to a simpler objective. This was my best idea for a regular expression for my first idea:
+
+regex = [^(\./Bernie\d+)\.html$]
+
+The idea was to say that it was required [] that something be selected that ended in html but also had the term "Bernie" in it. I thought that by using the /. at the beginning of my grouping I could just infer that there would also be other characters. This didn't end up working, but it seemed just outside my grasp so I thought it was worth a post.
+
+For my eventual actual code I decided to just try to get all the links to the articles on the NYT website. My code didn't actually produce what I wanted, but I am convinced that it is correct and this is just because of my text editor. Just like the previous assignment, it doesn't like my html.parser for some reason so i kept getting an error that wouldn't let me continue.
+
+but here is the code:
+
+from bs4 import BeautifulSoup
+import urllib.request
+import re
+url = 'http://www.nytimes.com/'
+page = urllib.request.urlopen(url)
+soup = BeautifulSoup(page.read(), “html.parser”)
+regex = '^(http\d+\.html)$'
+
+for href in findall:
+print (hrefs)
