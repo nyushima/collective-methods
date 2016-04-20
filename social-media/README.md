@@ -161,7 +161,7 @@ access_token = ''
 
 graph = facebook.GraphAPI(access_token)
 
-status_update = 'I love Collective Methods! 2'
+status_update = 'I love Collective Methods!'
 post = graph.put_wall_post(message=status_update)
 print(post)
 
@@ -223,5 +223,9 @@ def print_friend_details(friend):
 
 ##Resources
 
-* Tweepy Documentation: [http://tweepy.readthedocs.org](http://tweepy.readthedocs.org)
-* Facebook SDK for Python Documentation: [https://facebook-sdk.readthedocs.org/en/latest/install.html](https://facebook-sdk.readthedocs.org/en/latest/install.html)
+* Tweepy Documentation: [http://tweepy.readthedocs.org/en/latest/](http://tweepy.readthedocs.org/en/latest/)
+* Twitter Developers: [https://dev.twitter.com](https://dev.twitter.com)
+* Twitter Application Manager: [https://apps.twitter.com](https://apps.twitter.com)
+* Facebook SDK for Python Documentation: [http://facebook-sdk.readthedocs.org/en/latest/](http://facebook-sdk.readthedocs.org/en/latest/)
+* Facebook Graph API: [https://developers.facebook.com/docs/graph-api](https://developers.facebook.com/docs/graph-api)
+* Facebook Graph API Explorer: [https://developers.facebook.com/tools/explorer/](https://developers.facebook.com/tools/explorer/)
