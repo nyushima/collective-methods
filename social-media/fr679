@@ -1,0 +1,37 @@
+Script 1
+
+import tweepy
+
+consumer_key = 'Mischief managed'
+consumer_secret = 'Mischief managed'
+access_token = 'Mischief managed'
+access_token_secret = 'mischief managed'
+
+auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+auth.set_access_token(access_token, access_token_secret)
+api = tweepy.API(auth)
+
+for tweet in tweepy.Cursor(api.search, q="shenanigan", rpp=100, result_type="recent", include_entities=True, lang="en").items(50):
+	print('Name:', tweet.author.name)
+	print('Screen name:', tweet.author.screen_name)
+	print('Date tweeted:', tweet.created_at)
+	print('Tweet content:', tweet.text)
+	print('Location:', tweet.user.location)
+	
+	
+Script 2
+
+import tweepy
+
+consumer_key = 'Mischief kind of managed'
+consumer_secret = 'Mischief kind of managed'
+access_token = 'Mischief kind of managed'
+access_token_secret = 'Mischief kind of managed'
+
+auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+auth.set_access_token(access_token, access_token_secret)
+api = tweepy.API(auth)
+
+users = api.search_users(q = "street food")
+print(users)
+
