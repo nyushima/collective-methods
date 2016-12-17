@@ -1,0 +1,42 @@
+# number 1 
+#goes to page http://www.waoanime.tv/anime/akatsuki-no-yona, pulls episode name and upload date
+# python3 testscrape2_1yona3.py
+
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+
+html = urlopen("http://www.waoanime.tv/anime/akatsuki-no-yona/")
+soup = BeautifulSoup(html, "html.parser")
+	
+for ultag in soup.find_all('ul', {'class': 'sip-list'}):
+	for litag in ultag.find_all('li'):
+		print (litag.text)
+
+# number 2
+# returns number of episodes
+#python3 testscrape2_1yona5.py
+
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+
+html = urlopen("http://www.waoanime.tv/anime/akatsuki-no-yona/")
+soup = BeautifulSoup(html, "html.parser")
+
+episodes = 0
+for ultag in soup.find_all('ul', {'class': 'sip-list'}):
+	for litag in ultag.find_all('li'):
+		episodes += 1
+print(episodes)
+
+#3
+# pulls sub-headers from buzzfeed lists
+
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+
+html = urlopen("http://www.buzzfeed.com/annakopsky/anxiety-bookies#.wv7p2xVXpK")
+soup = BeautifulSoup(html, "html.parser")
+
+for ultag in soup.find_all('h2', {'class': 'subbuzz_name'}):
+	for litag in ultag.find_all('i'):
+		print (litag.text)
